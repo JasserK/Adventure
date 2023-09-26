@@ -6,7 +6,36 @@ public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
 
     public void startProgram() {
+        boolean running = true;
 
+        printStartMessage();
+        while (running) {
+
+            String originalString = scanner.nextLine().trim().toLowerCase();
+            String[] substrings = originalString.split(" ");
+            switch (substrings[0]) {
+
+                case "look":
+                    System.out.println(adventure.getCurrentRoom().getDescription());
+                    break;
+
+                case "help":
+                    showHelp();
+                    break;
+                case "go":
+                    go(substrings[1]);
+                    break;
+
+                case "exit":
+                    running = false;
+                    System.out.println("You have tucked your tail between your legs, and ran away from battle!");
+                    break;
+                default:
+                    System.out.println("Invalid command\nType \"help\" for a list of commands.");
+            }
+
+            //Help med hjælpemetoder til koden
+        }
     }
 
 
@@ -25,23 +54,45 @@ public class UserInterface {
                 }
 
                 break;
-            case "s" :
-            case "south" :
-                System.out.println("going south");
+
+            case "s":
+            case "south":
+
+                if (adventure.getCurrentRoom().getSouth() == null) {
+                    System.out.println("You cannot go in this direction");
+                } else {
+                    adventure.setCurrentRoom(adventure.getCurrentRoom().getSouth());
+                    System.out.println("going south");
+                }
+
                 break;
-            case "e" :
-            case "east" :
-                System.out.println("going east");
+
+            case "e":
+            case "east":
+
+                if (adventure.getCurrentRoom().getEast() == null) {
+                    System.out.println("You cannot go in this direction");
+                } else {
+                    adventure.setCurrentRoom(adventure.getCurrentRoom().getEast());
+                    System.out.println("going east");
+                }
+
                 break;
-            case "w" :
-            case "west" :
-                System.out.println("going west");
+
+            case "w":
+            case "west":
+
+                if (adventure.getCurrentRoom().getWest() == null) {
+                    System.out.println("You cannot go in this direction");
+                } else {
+                    adventure.setCurrentRoom(adventure.getCurrentRoom().getEast());
+                    System.out.println("going west");
+                }
+
                 break;
 
             default:
-                System.out.println("invalid input");
-
-
+                System.out.println("invalid direction");
         }
 
     }
@@ -66,6 +117,6 @@ public class UserInterface {
         System.out.println(sb);
 
 
-        //Den skal finpudses til at give brugeren evt mulighed for hjælp til adskillige ting?
+
     }
 }

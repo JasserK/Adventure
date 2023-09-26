@@ -12,6 +12,13 @@ public class Room {
         this.name = name;
         this.description = description;
     }
+    public static void setRoomConnections(Room room, Room north, Room south, Room east, Room west) {
+        room.setNorth(north);
+        room.setSouth(south);
+        room.setEast(east);
+        room.setWest(west);
+    }
+
 
 
     public String getName() {
@@ -22,7 +29,7 @@ public class Room {
         return description;
     }
 
-//Getters
+    //Getters
     public Room getNorth() {
         return north;
     }
