@@ -14,13 +14,13 @@ public class UserInterface {
             case "north" :
                 System.out.println("going north");
                 break;
-            case "e" :
-            case "east" :
-                System.out.println("going east");
-                break;
             case "s" :
             case "south" :
                 System.out.println("going south");
+                break;
+            case "e" :
+            case "east" :
+                System.out.println("going east");
                 break;
             case "w" :
             case "west" :
