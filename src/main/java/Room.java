@@ -5,12 +5,17 @@ public class Room {
     private Room east;
     private Room west;
     private String name;
-    private String description;
+    private String lightDescription;
+    private String darkDescription;
+    private boolean isDark;
 
 
-    public Room(String name, String description) {
+
+    public Room(String name, boolean isDark, String lightDescription, String darkDescription) {
         this.name = name;
-        this.description = description;
+        this.isDark = isDark;
+        this.lightDescription = lightDescription;
+        this.darkDescription = darkDescription;
     }
     public static void setRoomConnections(Room room, Room north, Room south, Room east, Room west) {
         room.setNorth(north);
@@ -25,8 +30,8 @@ public class Room {
         return name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getLightDescription() {
+        return lightDescription;
     }
 
     //Getters
@@ -44,6 +49,14 @@ public class Room {
 
     public Room getWest() {
         return west;
+    }
+
+    public String getDarkDescription() {
+        return darkDescription;
+    }
+
+    public boolean isDark() {
+        return isDark;
     }
 
     //Setters

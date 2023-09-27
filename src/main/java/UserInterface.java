@@ -16,7 +16,12 @@ public class UserInterface {
             switch (substrings[0]) {
 
                 case "look":
-                    System.out.println(adventure.getCurrentRoom().getDescription());
+                    if (substrings.length == 2)
+                        lookBack(substrings[1]);
+                    else if (substrings.length == 1)
+                        look();
+                    else
+                        invalidCommandPrompt();
                     break;
 
                 case "help":
@@ -31,10 +36,10 @@ public class UserInterface {
                     System.out.println("You have tucked your tail between your legs, and ran away from battle!");
                     break;
                 default:
-                    System.out.println("Invalid command\nType \"help\" for a list of commands.");
+                    invalidCommandPrompt();
             }
 
-            //Help med hjælpemetoder til koden
+
         }
     }
 
@@ -49,6 +54,7 @@ public class UserInterface {
                 if (adventure.getCurrentRoom().getNorth() == null) {
                     System.out.println("You cannot go in this direction");
                 } else {
+                    adventure.setPreviousRoom(adventure.getCurrentRoom());
                     adventure.setCurrentRoom(adventure.getCurrentRoom().getNorth());
                     System.out.println("going north");
                 }
@@ -61,6 +67,7 @@ public class UserInterface {
                 if (adventure.getCurrentRoom().getSouth() == null) {
                     System.out.println("You cannot go in this direction");
                 } else {
+                    adventure.setPreviousRoom(adventure.getCurrentRoom());
                     adventure.setCurrentRoom(adventure.getCurrentRoom().getSouth());
                     System.out.println("going south");
                 }
@@ -73,6 +80,7 @@ public class UserInterface {
                 if (adventure.getCurrentRoom().getEast() == null) {
                     System.out.println("You cannot go in this direction");
                 } else {
+                    adventure.setPreviousRoom(adventure.getCurrentRoom());
                     adventure.setCurrentRoom(adventure.getCurrentRoom().getEast());
                     System.out.println("going east");
                 }
@@ -85,7 +93,8 @@ public class UserInterface {
                 if (adventure.getCurrentRoom().getWest() == null) {
                     System.out.println("You cannot go in this direction");
                 } else {
-                    adventure.setCurrentRoom(adventure.getCurrentRoom().getEast());
+                    adventure.setPreviousRoom(adventure.getCurrentRoom());
+                    adventure.setCurrentRoom(adventure.getCurrentRoom().getWest());
                     System.out.println("going west");
                 }
 
@@ -116,7 +125,32 @@ public class UserInterface {
         sb.append("exit: Exits program");
         System.out.println(sb);
 
-
-
     }
+
+    public void lookBack(String direction) {
+        if (adventure.getPreviousRoom() == null)
+            System.out.println("You haven't moved yet.");
+        else {
+            switch (direction) {
+                case "back":
+                    System.out.println(adventure.getPreviousRoom().getName());
+                    break;
+                default:
+                    System.out.println("You cannot look that way.");
+            }
+        }
+    }
+
+    public void look() {
+        if (adventure.getCurrentRoom().isDark()) {
+            System.out.println(adventure.getCurrentRoom().getDarkDescription());
+        } else {
+            System.out.println(adventure.getCurrentRoom().getLightDescription());
+        }
+    }
+
+    public void invalidCommandPrompt () {
+        System.out.println("Invalid command\nType \"help\" for a list of commands.");
+    }
+
 }

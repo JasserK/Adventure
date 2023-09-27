@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Room constructor">
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="delopgave 1 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
-    <list id="c56e2255-a518-42ca-a406-99a0dd8f71b1" name="Changes by Jasser" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-    </list>
+    <list id="c56e2255-a518-42ca-a406-99a0dd8f71b1" name="Changes by Jasser" comment="" />
+    <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,31 +19,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="7" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="5" end1="5" start2="8" end2="12" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="6" end1="6" start2="13" end2="36" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="10" end1="15" start2="40" end2="53" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="16" end1="19" start2="54" end2="65" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="20" end1="23" start2="66" end2="77" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="24" end1="27" start2="78" end2="89" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="28" end1="28" start2="90" end2="91" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="29" end1="32" start2="92" end2="93" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="33" end1="33" start2="94" end2="118" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Room.java">
-      <ranges>
-        <range start1="2" end1="7" start2="2" end2="8" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="9" end1="14" start2="10" end2="12" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="16" end1="16" start2="14" end2="21" changelist="e9b4f08e-466a-40bb-8e99-17387f80df62" />
-        <range start1="17" end1="17" start2="22" end2="65" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="19" end1="20" start2="67" end2="67" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -58,21 +29,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,6 +55,10 @@
       <workItem from="1695649031168" duration="2000" />
       <workItem from="1695649484988" duration="1316000" />
       <workItem from="1695723463804" duration="11019000" />
+      <workItem from="1695735644741" duration="450000" />
+      <workItem from="1695736570709" duration="179000" />
+      <workItem from="1695796912596" duration="812000" />
+      <workItem from="1695797821303" duration="6718000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -101,7 +76,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695724251336</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="delopgave 1 done done">
+      <option name="closed" value="true" />
+      <created>1695735757242</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695735757242</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +93,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="go method" />
     <MESSAGE value="Room constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Room constructor" />
+    <MESSAGE value="delopgave 1 done done" />
+    <option name="LAST_COMMIT_MESSAGE" value="delopgave 1 done done" />
   </component>
 </project>
