@@ -20,7 +20,7 @@ public class UserInterface {
                         System.out.println(adventure.player.lookBack(substrings[1]));
 
                     else if (substrings.length == 1)
-                        adventure.player.look();
+                        System.out.println(adventure.player.look());
                     else
                         invalidCommandPrompt();
                     break;

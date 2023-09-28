@@ -82,12 +82,16 @@ public class Player {
         return message;
     }
 
-    public void look() {
+    public String look() {
+        String message;
         if (currentRoom.isDark()) {
-            System.out.println(currentRoom.getDarkDescription());
+            message = currentRoom.getDarkDescription();
+
         } else {
-            System.out.println(currentRoom.getLightDescription());
+            message = currentRoom.getLightDescription();
+
         }
+        return message;
     }
 
 
