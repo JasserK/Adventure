@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="delopgave 1 done">
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="description for ligt or dark rooms&#10;&#10;previous room added&#10;look back method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="c56e2255-a518-42ca-a406-99a0dd8f71b1" name="Changes by Jasser" comment="" />
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="" />
@@ -16,6 +15,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +64,9 @@
       <workItem from="1695735644741" duration="450000" />
       <workItem from="1695736570709" duration="179000" />
       <workItem from="1695796912596" duration="812000" />
-      <workItem from="1695797821303" duration="6718000" />
+      <workItem from="1695797821303" duration="6905000" />
+      <workItem from="1695805224343" duration="650000" />
+      <workItem from="1695881840758" duration="1128000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -84,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695735757242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="description for ligt or dark rooms&#10;&#10;previous room added&#10;look back method">
+      <option name="closed" value="true" />
+      <created>1695804643146</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695804643146</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +110,7 @@
     <MESSAGE value="go method" />
     <MESSAGE value="Room constructor" />
     <MESSAGE value="delopgave 1 done done" />
-    <option name="LAST_COMMIT_MESSAGE" value="delopgave 1 done done" />
+    <MESSAGE value="description for ligt or dark rooms&#10;&#10;previous room added&#10;look back method" />
+    <option name="LAST_COMMIT_MESSAGE" value="description for ligt or dark rooms&#10;&#10;previous room added&#10;look back method" />
   </component>
 </project>
