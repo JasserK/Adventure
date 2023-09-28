@@ -17,9 +17,10 @@ public class UserInterface {
 
                 case "look":
                     if (substrings.length == 2)
-                        lookBack(substrings[1]);
+                        System.out.println(adventure.player.lookBack(substrings[1]));
+
                     else if (substrings.length == 1)
-                        look();
+                        adventure.player.look();
                     else
                         invalidCommandPrompt();
                     break;
@@ -27,8 +28,8 @@ public class UserInterface {
                 case "help":
                     showHelp();
                     break;
-                case "go":
-                    go(substrings[1]);
+                case "go": // ret crash når der kun tastes "go" exception
+                    adventure.player.go(substrings[1]);
                     break;
 
                 case "exit":
@@ -44,67 +45,7 @@ public class UserInterface {
     }
 
 
-    public void go(String direction) {
 
-
-        switch (direction) {
-            case "n":
-            case "north":
-
-                if (adventure.getCurrentRoom().getNorth() == null) {
-                    System.out.println("You cannot go in this direction");
-                } else {
-                    adventure.setPreviousRoom(adventure.getCurrentRoom());
-                    adventure.setCurrentRoom(adventure.getCurrentRoom().getNorth());
-                    System.out.println("going north");
-                }
-
-                break;
-
-            case "s":
-            case "south":
-
-                if (adventure.getCurrentRoom().getSouth() == null) {
-                    System.out.println("You cannot go in this direction");
-                } else {
-                    adventure.setPreviousRoom(adventure.getCurrentRoom());
-                    adventure.setCurrentRoom(adventure.getCurrentRoom().getSouth());
-                    System.out.println("going south");
-                }
-
-                break;
-
-            case "e":
-            case "east":
-
-                if (adventure.getCurrentRoom().getEast() == null) {
-                    System.out.println("You cannot go in this direction");
-                } else {
-                    adventure.setPreviousRoom(adventure.getCurrentRoom());
-                    adventure.setCurrentRoom(adventure.getCurrentRoom().getEast());
-                    System.out.println("going east");
-                }
-
-                break;
-
-            case "w":
-            case "west":
-
-                if (adventure.getCurrentRoom().getWest() == null) {
-                    System.out.println("You cannot go in this direction");
-                } else {
-                    adventure.setPreviousRoom(adventure.getCurrentRoom());
-                    adventure.setCurrentRoom(adventure.getCurrentRoom().getWest());
-                    System.out.println("going west");
-                }
-
-                break;
-
-            default:
-                System.out.println("invalid direction");
-        }
-
-    }
 
     public void printStartMessage() {
         System.out.println("Welcome to Adventure!");
@@ -127,27 +68,7 @@ public class UserInterface {
 
     }
 
-    public void lookBack(String direction) {
-        if (adventure.getPreviousRoom() == null)
-            System.out.println("You haven't moved yet.");
-        else {
-            switch (direction) {
-                case "back":
-                    System.out.println(adventure.getPreviousRoom().getName());
-                    break;
-                default:
-                    System.out.println("You cannot look that way.");
-            }
-        }
-    }
 
-    public void look() {
-        if (adventure.getCurrentRoom().isDark()) {
-            System.out.println(adventure.getCurrentRoom().getDarkDescription());
-        } else {
-            System.out.println(adventure.getCurrentRoom().getLightDescription());
-        }
-    }
 
     public void invalidCommandPrompt () {
         System.out.println("Invalid command\nType \"help\" for a list of commands.");

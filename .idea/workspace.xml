@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="description for ligt or dark rooms&#10;&#10;previous room added&#10;look back method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Map class added&#10;Player class added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="c56e2255-a518-42ca-a406-99a0dd8f71b1" name="Changes by Jasser" comment="" />
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="" />
@@ -66,7 +68,7 @@
       <workItem from="1695796912596" duration="812000" />
       <workItem from="1695797821303" duration="6905000" />
       <workItem from="1695805224343" duration="650000" />
-      <workItem from="1695881840758" duration="1128000" />
+      <workItem from="1695881840758" duration="11086000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -100,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695804643146</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Map class added&#10;Player class added">
+      <option name="closed" value="true" />
+      <created>1695883049204</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695883049204</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +121,7 @@
     <MESSAGE value="Room constructor" />
     <MESSAGE value="delopgave 1 done done" />
     <MESSAGE value="description for ligt or dark rooms&#10;&#10;previous room added&#10;look back method" />
-    <option name="LAST_COMMIT_MESSAGE" value="description for ligt or dark rooms&#10;&#10;previous room added&#10;look back method" />
+    <MESSAGE value="Map class added&#10;Player class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Map class added&#10;Player class added" />
   </component>
 </project>
