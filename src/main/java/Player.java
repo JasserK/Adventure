@@ -3,7 +3,8 @@ public class Player {
     private Room currentRoom;
     private Room previousRoom = null;
 
-    public void go(String direction) {
+    public String go(String direction) {
+        String message;
 
 
         switch (direction) {
@@ -11,11 +12,11 @@ public class Player {
             case "north":
 
                 if (currentRoom.getNorth() == null) {
-                    System.out.println("You cannot go in this direction");
+                    message = "You cannot go in this direction";
                 } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getNorth();
-                    System.out.println("going north");
+                    message = "going north";
                 }
 
                 break;
@@ -24,11 +25,11 @@ public class Player {
             case "south":
 
                 if (currentRoom.getSouth() == null) {
-                    System.out.println("You cannot go in this direction");
+                    message = "You cannot go in this direction";
                 } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getSouth();
-                    System.out.println("going south");
+                    message = "going south";
                 }
 
                 break;
@@ -37,11 +38,11 @@ public class Player {
             case "east":
 
                 if (currentRoom.getEast() == null) {
-                    System.out.println("You cannot go in this direction");
+                    message = "You cannot go in this direction";
                 } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getEast();
-                    System.out.println("going east");
+                    message = "going east";
                 }
 
                 break;
@@ -50,19 +51,19 @@ public class Player {
             case "west":
 
                 if (currentRoom.getWest() == null) {
-                    System.out.println("You cannot go in this direction");
+                    message = "You cannot go in this direction";
                 } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getWest();
-                    System.out.println("going west");
+                    message = "going west";
                 }
 
                 break;
 
             default:
-                System.out.println("invalid direction");
+                message = "invalid direction";
         }
-
+        return message;
     }
 
 

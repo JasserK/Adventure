@@ -29,7 +29,7 @@ public class UserInterface {
                     showHelp();
                     break;
                 case "go": // ret crash når der kun tastes "go" exception
-                    adventure.player.go(substrings[1]);
+                    System.out.println(adventure.player.go(substrings[1]));
                     break;
 
                 case "exit":
