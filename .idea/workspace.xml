@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Map class added&#10;Player class added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
-    <list id="c56e2255-a518-42ca-a406-99a0dd8f71b1" name="Changes by Jasser" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Map class added&#10;Player class added" />
+    <list id="c56e2255-a518-42ca-a406-99a0dd8f71b1" name="Changes by Jasser" comment="" />
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,38 +22,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/UserInterface.java">
-      <ranges>
-        <range start1="22" end1="23" start2="22" end2="23" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="31" end1="32" start2="31" end2="32" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/Player.java">
-      <ranges>
-        <range start1="5" end1="6" start2="5" end2="7" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="13" end1="14" start2="14" end2="15" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="17" end1="18" start2="18" end2="19" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="26" end1="27" start2="27" end2="28" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="30" end1="31" start2="31" end2="32" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="39" end1="40" start2="40" end2="41" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="43" end1="44" start2="44" end2="45" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="52" end1="53" start2="53" end2="54" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="56" end1="57" start2="57" end2="58" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="62" end1="63" start2="63" end2="64" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="64" end1="65" start2="65" end2="66" changelist="c56e2255-a518-42ca-a406-99a0dd8f71b1" />
-        <range start1="84" end1="85" start2="85" end2="87" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="86" end1="87" start2="88" end2="90" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="88" end1="89" start2="91" end2="93" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-        <range start1="90" end1="90" start2="94" end2="95" changelist="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2VtIcHg1hbjJz7BaBtpJj6j6ZDO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
