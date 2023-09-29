@@ -2,21 +2,20 @@ public class Player {
 
     private Room currentRoom;
     private Room previousRoom = null;
+    private ArrayList<Item> inventory = new ArrayList<>();
 
-    public String go(String direction) {
-        String message;
+    public boolean go(String direction) {
 
+        boolean canGo = false;
 
         switch (direction) {
             case "n":
             case "north":
 
-                if (currentRoom.getNorth() == null) {
-                    message = "You cannot go in this direction";
-                } else {
+                if (currentRoom.getNorth() != null) {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getNorth();
-                    message = "going north";
+                    canGo = true;
                 }
 
                 break;
@@ -24,12 +23,11 @@ public class Player {
             case "s":
             case "south":
 
-                if (currentRoom.getSouth() == null) {
-                    message = "You cannot go in this direction";
-                } else {
+
+                if (currentRoom.getSouth() != null) {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getSouth();
-                    message = "going south";
+                    canGo = true;
                 }
 
                 break;
@@ -37,12 +35,11 @@ public class Player {
             case "e":
             case "east":
 
-                if (currentRoom.getEast() == null) {
-                    message = "You cannot go in this direction";
-                } else {
+
+                if (currentRoom.getEast() != null) {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getEast();
-                    message = "going east";
+                    canGo = true;
                 }
 
                 break;
@@ -50,20 +47,19 @@ public class Player {
             case "w":
             case "west":
 
-                if (currentRoom.getWest() == null) {
-                    message = "You cannot go in this direction";
-                } else {
+
+                if (currentRoom.getWest() != null) {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getWest();
-                    message = "going west";
+                    canGo = true;
                 }
 
                 break;
 
             default:
-                message = "invalid direction";
+                break;
         }
-        return message;
+        return canGo;
     }
 
 
@@ -94,9 +90,6 @@ public class Player {
         }
         return message;
     }
-
-
-
 
 
     public Room getCurrentRoom() {

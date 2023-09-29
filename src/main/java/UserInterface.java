@@ -28,8 +28,33 @@ public class UserInterface {
                 case "help":
                     showHelp();
                     break;
-                case "go": // ret crash når der kun tastes "go" exception
-                    System.out.println(adventure.player.go(substrings[1]));
+                case "go": // TODO ret crash når der kun tastes "go" exception
+                    String direction = substrings[1];
+                    if (direction.length() == 1) {
+                        direction = switch (direction) {
+                            case "n" -> "north";
+                            case "s" -> "south";
+                            case "e" -> "east";
+                            case "w" -> "west";
+
+                            default -> "invalid";
+
+                        };
+
+                    }
+
+
+
+                    if (adventure.go(direction)) {
+                        System.out.println("Going " + direction);
+                    }
+                    else if (direction.equals("invalid") ) {
+                        System.out.println("Invalid direction");
+                    } else {
+                        System.out.println("You cannot go in this direction");
+                    }
+
+
                     break;
 
                 case "exit":
@@ -39,12 +64,8 @@ public class UserInterface {
                 default:
                     invalidCommandPrompt();
             }
-
-
         }
     }
-
-
 
 
     public void printStartMessage() {
@@ -69,8 +90,7 @@ public class UserInterface {
     }
 
 
-
-    public void invalidCommandPrompt () {
+    public void invalidCommandPrompt() {
         System.out.println("Invalid command\nType \"help\" for a list of commands.");
     }
 

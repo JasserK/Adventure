@@ -8,4 +8,8 @@ public class Adventure {
 
     }
 
+    public boolean go(String direction) {
+        return player.go(direction);
+    }
+
 }

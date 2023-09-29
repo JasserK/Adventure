@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Map {
 
 
@@ -17,7 +19,6 @@ public class Map {
 
         starterRoom = room1;
 
-
         Room.setRoomConnections(room1, null, room4, room2, null);
         Room.setRoomConnections(room2, null, null, room3, room1);
         Room.setRoomConnections(room3, null, room6, null, room2);
@@ -28,7 +29,10 @@ public class Map {
         Room.setRoomConnections(room8, room5, null, room7, room9);
         Room.setRoomConnections(room9, room6, null, room8, null);
 
-//Tilføj eventuelt noget til null og print "u shall not pass"
+
+        ArrayList<Item> listOfItems = new ArrayList<>();
+
+
     }
     public Room getStarterRoom() {
         return starterRoom;
