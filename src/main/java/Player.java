@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Player {
 
     private Room currentRoom;
@@ -107,4 +109,21 @@ public class Player {
     public void setPreviousRoom(Room previousRoom) {
         this.previousRoom = previousRoom;
     }
+
+
+
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public boolean takeItem(Item item, Room currentRoom) {
+        if (currentRoom.removeItem(item)) {
+            inventory.add(item);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
+
