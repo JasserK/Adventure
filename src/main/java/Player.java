@@ -65,7 +65,7 @@ public class Player {
     }
 
 
-    public String lookBack(String direction) {
+    public String lookDirection(String direction) {
         String message;
         if (previousRoom == null)
             message = "You haven't moved yet.";
@@ -82,15 +82,8 @@ public class Player {
     }
 
     public String look() {
-        String message;
-        if (currentRoom.isDark()) {
-            message = currentRoom.getDarkDescription();
 
-        } else {
-            message = currentRoom.getLightDescription();
-
-        }
-        return message;
+        return currentRoom.toString();
     }
 
 
@@ -111,18 +104,47 @@ public class Player {
     }
 
 
-
     public ArrayList<Item> getInventory() {
         return inventory;
     }
 
-    public boolean takeItem(Item item, Room currentRoom) {
-        if (currentRoom.removeItem(item)) {
-            inventory.add(item);
-            return true;
-        } else {
-            return false;
+    public boolean takeItem(String itemName) {
+        boolean canTakeItem = false;
+        for (Item i : currentRoom.getItemsInRoom()) {
+            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+                inventory.add(i);
+                currentRoom.removeItem(i);
+                canTakeItem = true;
+                break;
+            }
         }
+        return canTakeItem;
+    }
+
+    public boolean dropItem(String itemName) {
+        boolean canDropItem = false;
+        for (Item i : inventory) {
+            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+                currentRoom.addItem(i);
+                inventory.remove(i);
+                canDropItem = true;
+                break;
+            }
+        }
+        return canDropItem;
+    }
+
+    public StringBuilder printInventory() {
+        StringBuilder print = new StringBuilder("Inventory:");
+
+        if (inventory.isEmpty()) {
+            print.append("\nEmpty");
+        } else {
+            for (Item i : inventory) {
+                print.append("\n").append(i.toString());
+            }
+        }
+        return print;
     }
 
 }

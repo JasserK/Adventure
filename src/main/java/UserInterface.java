@@ -1,68 +1,106 @@
 import java.util.Scanner;
 
+
 public class UserInterface {
 
     private Adventure adventure = new Adventure();
     private Scanner scanner = new Scanner(System.in);
 
+
     public void startProgram() {
         boolean running = true;
 
+
         printStartMessage();
         while (running) {
+            boolean runSwitch2 = false;
+            String input = scanner.nextLine().trim().toLowerCase();
+            String[] subInput = input.split(" ");
 
-            String originalString = scanner.nextLine().trim().toLowerCase();
-            String[] substrings = originalString.split(" ");
-            switch (substrings[0]) {
 
-                case "look":
-                    if (substrings.length == 2)
-                        System.out.println(adventure.player.lookBack(substrings[1]));
-
-                    else if (substrings.length == 1)
-                        System.out.println(adventure.player.look());
-                    else
-                        invalidCommandPrompt();
+            switch (input) {
+                case "look": // Få description af current room
+                    System.out.println(adventure.look());
                     break;
 
                 case "help":
                     showHelp();
                     break;
-                case "go": // TODO ret crash når der kun tastes "go" exception
-                    String direction = substrings[1];
-                    if (direction.length() == 1) {
-                        direction = switch (direction) {
-                            case "n" -> "north";
-                            case "s" -> "south";
-                            case "e" -> "east";
-                            case "w" -> "west";
 
-                            default -> "invalid";
-
-                        };
-
-                    }
-
-
-
-                    if (adventure.go(direction)) {
-                        System.out.println("Going " + direction);
-                    }
-                    else if (direction.equals("invalid") ) {
-                        System.out.println("Invalid direction");
-                    } else {
-                        System.out.println("You cannot go in this direction");
-                    }
-
-
+                case "inventory":
+                    System.out.println(adventure.printPlayerInventory());
                     break;
 
                 case "exit":
                     running = false;
                     System.out.println("You have tucked your tail between your legs, and ran away from battle!");
                     break;
+
                 default:
-                    invalidCommandPrompt();
+                    runSwitch2 = true;
+                    break;
+            }
+
+            if (runSwitch2) {
+                switch (subInput[0]) {
+
+                    case "look": // Kig et sted hen
+                        if (subInput.length == 2)
+                            System.out.println(adventure.lookDirection(subInput[1]));
+                        else
+                            invalidCommandPrompt();
+                        break;
+
+                    case "take":
+                        if (subInput.length == 2)
+                            if (adventure.playerPicksUpItem(subInput[1])) {
+                                System.out.println(firstLetterToUpperCase(subInput[1]) + " picked up");
+                            } else {
+                                System.out.println("Item not available");
+                            }
+                        else
+                            invalidCommandPrompt();
+                        break;
+
+                    case "drop":
+                        if (subInput.length == 2)
+                        if (adventure.playerDropsItem(subInput[1])) {
+                            System.out.println(firstLetterToUpperCase(subInput[1]) + " dropped" );
+                        } else {
+                            System.out.println("No such item in inventory");
+                        }
+                        else
+                            invalidCommandPrompt();
+                        break;
+
+                    case "go":
+                        if (subInput.length != 2) {
+                            invalidCommandPrompt();
+                        } else {
+                            String direction = subInput[1];
+                            if (direction.length() == 1) {
+                                direction = switch (direction) {
+                                    case "n" -> "north";
+                                    case "s" -> "south";
+                                    case "e" -> "east";
+                                    case "w" -> "west";
+
+                                    default -> "invalid";
+                                };
+                            }
+                            if (adventure.playerMoves(direction)) {
+                                System.out.println("Going " + direction);
+                            } else if (direction.equals("invalid")) {
+                                System.out.println("Invalid direction");
+                            } else {
+                                System.out.println("You cannot go in this direction");
+                            }
+                        }
+                        break;
+
+                    default:
+                        invalidCommandPrompt();
+                }
             }
         }
     }
@@ -72,7 +110,7 @@ public class UserInterface {
         System.out.println("Welcome to Adventure!");
         System.out.println("You are about to embark on an epic adventure in the fabled Eternal city Nokron.");
         System.out.println("But we wary young adventurer! Not only are there riches for the taking, but also nasty monsters!");
-        System.out.println("Survive as long as you can until your defeat... ;)");
+        System.out.println("Survive as long as you can until your defeat... )");
     }
 
     public void showHelp() {
@@ -92,6 +130,13 @@ public class UserInterface {
 
     public void invalidCommandPrompt() {
         System.out.println("Invalid command\nType \"help\" for a list of commands.");
+    }
+
+    private String firstLetterToUpperCase(String input) {
+        if (input == null || input.isEmpty()) {
+            return input; // Returner uændret hvis strengen er tom eller null
+        }
+        return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
 
 }

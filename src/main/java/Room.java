@@ -13,13 +13,15 @@ public class Room {
     private ArrayList<Item> itemsInRoom;
 
 
-    public Room(String name, boolean isDark, String lightDescription, String darkDescription) {
+    public Room(String name, boolean isDark, String lightDescription, String darkDescription, ArrayList<Item> itemsInRoom) {
         this.name = name;
         this.isDark = isDark;
         this.lightDescription = lightDescription;
         this.darkDescription = darkDescription;
+        this.itemsInRoom = itemsInRoom;
     }
 
+    // Metode til at sætte rummenes connections
     public static void setRoomConnections(Room room, Room north, Room south, Room east, Room west) {
         room.setNorth(north);
         room.setSouth(south);
@@ -27,12 +29,13 @@ public class Room {
         room.setWest(west);
     }
 
-    public static void addItemsToRoom(Room room, ArrayList<Item> items ) {
-
-        room.setItemsInRoom(items);
+    // Metode til at sætte genstande i rummet
+    public void setItemsInRoom(ArrayList<Item> items) {
+        this.itemsInRoom = items;
     }
 
 
+    //Getters
     public String getName() {
         return name;
     }
@@ -41,7 +44,10 @@ public class Room {
         return lightDescription;
     }
 
-    //Getters
+    public String getDarkDescription() {
+        return darkDescription;
+    }
+
     public Room getNorth() {
         return north;
     }
@@ -58,12 +64,12 @@ public class Room {
         return west;
     }
 
-    public String getDarkDescription() {
-        return darkDescription;
-    }
-
     public boolean isDark() {
         return isDark;
+    }
+
+    public ArrayList<Item> getItemsInRoom() {
+        return itemsInRoom;
     }
 
     //Setters
@@ -83,77 +89,40 @@ public class Room {
         this.west = west;
     }
 
-    public void setItemsInRoom(ArrayList<Item> itemsInRoom) {
-        this.itemsInRoom = itemsInRoom;
-    }
-
-//ToString
 
 
-    public ArrayList<Item> getItemsInRoom() {
-        return itemsInRoom;
-    }
+    //ToString
+    @Override
+    public String toString() {
+        String description = isDark ? darkDescription : lightDescription;  // "?" er ensbetydende med at man laver en if else statement, koden ser bare mindre rodet ud sådan.
 
-    public Item findItem(String itemName) {
-
-        Item result = null;
-        for (Item item : itemsInRoom) {
-            if (item.getItemName().equalsIgnoreCase(itemName)) {
-                result = item;
-                break;
+        if (!isDark && !itemsInRoom.isEmpty()) { // Hvis det ER lyst og der ER items i rummet:
+            description += "\nItems in the room:";
+            for (Item item : itemsInRoom) {
+                description += "\n- " + item.getItemName();
             }
         }
-        return result;
-
+        else if (!isDark) { // Hvis det ER lyst og der IKKE er items i rummet:
+            description += "\nNo items in sight.";
+        }
+        else { //Hvis det er mørkt, uanset om der ER eller IKKE er nogen items.
+            description += "\nIt's too dark to see if there are any items.";
+        }
+        return description;
     }
+
+
+
+
+
 
     public void addItem(Item item) {
         itemsInRoom.add(item);
     }
 
-    public boolean removeItem(Item item) {
-        if (itemsInRoom.contains(item)) {
-            itemsInRoom.remove(item);
-            return true;
-        }
-        return false;
+    public void removeItem(Item item) {
+        itemsInRoom.remove(item);
     }
 
-    //Take metode
-
-    public boolean take(String itemName, Player player, Room currentRoom) {
-        boolean canPickUp = false;
-        for (int i = 0; i < currentRoom.getItemsInRoom().size(); i++) {
-            Item item = currentRoom.getItemsInRoom().get(i);
-            if (item.getItemName().equalsIgnoreCase(itemName)) {
-
-                player.getInventory().add(item);
-
-                currentRoom.getItemsInRoom().remove(i);
-                canPickUp = true;
-
-                //Der skal være en print for dette i UI samt getInventory metoden skal laves i player klassen.
-            }
-
-        }
-        return canPickUp;
-    }
-
-
-    // ? er ensbetydende med at man laver en if else statement, koden ser bare mindre rodet ud sådan.
-    @Override
-    public String toString() {
-        String description = isDark ? darkDescription : lightDescription;
-
-        if (itemsInRoom.isEmpty()) {
-            return description;
-        }
-        description = "Items in the room:";
-        for (Item item : itemsInRoom) {
-            description += "\n- " + item.getItemName();
-        }
-
-        return description;
-    }
 
 }
