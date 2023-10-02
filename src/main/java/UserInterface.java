@@ -116,12 +116,16 @@ public class UserInterface {
     public void showHelp() {
         StringBuilder sb = new StringBuilder();
         sb.append("These are the following commands you can use:\n");
-        sb.append("help: Show this message\n");
-        sb.append("look: Get description of current room\n");
+        sb.append("help: Shows this message\n");
+        sb.append("look: Get description of the current room\n");
+        sb.append("look back: Name of the room you previously came from\n");
         sb.append("go n/north: Character goes north\n");
         sb.append("go s/south: Character goes south\n");
         sb.append("go e/east: Character goes east\n");
         sb.append("go w/west: Character goes west\n");
+        sb.append("inventory: Checks the player's inventory\n");
+        sb.append("take (Item): Takes the item in the room\n");
+        sb.append("drop (Item): Drops the item from player's inventory\n");
         sb.append("exit: Exits program");
         System.out.println(sb);
 

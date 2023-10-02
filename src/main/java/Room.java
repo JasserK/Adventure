@@ -97,13 +97,13 @@ public class Room {
         String description = isDark ? darkDescription : lightDescription;  // "?" er ensbetydende med at man laver en if else statement, koden ser bare mindre rodet ud sådan.
 
         if (!isDark && !itemsInRoom.isEmpty()) { // Hvis det ER lyst og der ER items i rummet:
-            description += "\nItems in the room:";
+            description += "\nBehold! Items in the room:";
             for (Item item : itemsInRoom) {
                 description += "\n- " + item.getItemName();
             }
         }
         else if (!isDark) { // Hvis det ER lyst og der IKKE er items i rummet:
-            description += "\nNo items in sight.";
+            description += "\nNo items to behold...";
         }
         else { //Hvis det er mørkt, uanset om der ER eller IKKE er nogen items.
             description += "\nIt's too dark to see if there are any items.";
