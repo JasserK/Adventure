@@ -114,9 +114,7 @@ public class Room {
         itemsInRoom.add(item);
     }
 
-    public void removeItem(Item item) {
-        itemsInRoom.remove(item);
-    }
+
 
 
     public Item removeItem(String itemName) {
