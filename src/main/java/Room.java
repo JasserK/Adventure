@@ -29,10 +29,7 @@ public class Room {
         room.setWest(west);
     }
 
-    // Metode til at sætte genstande i rummet
-    public void setItemsInRoom(ArrayList<Item> items) {
-        this.itemsInRoom = items;
-    }
+
 
 
     //Getters
@@ -113,9 +110,6 @@ public class Room {
 
 
 
-
-
-
     public void addItem(Item item) {
         itemsInRoom.add(item);
     }
@@ -125,4 +119,16 @@ public class Room {
     }
 
 
+    public Item removeItem(String itemName) {
+        Item found = null;
+        for (Item i : itemsInRoom) {
+            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+                found = i;
+            }
+        }
+        if (found != null) {
+            itemsInRoom.remove(found);
+        }
+        return found;
+    }
 }

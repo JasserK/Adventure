@@ -108,18 +108,23 @@ public class Player {
         return inventory;
     }
 
+
     public boolean takeItem(String itemName) {
-        boolean canTakeItem = false;
-        for (Item i : currentRoom.getItemsInRoom()) {
-            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
-                inventory.add(i);
-                currentRoom.removeItem(i);
-                canTakeItem = true;
-                break;
-            }
+        Item found = currentRoom.removeItem(itemName);
+        if (found != null) {
+            inventory.add(found);
+            return true;
+        } else {
+            return false;
+
         }
-        return canTakeItem;
+
     }
+
+
+
+
+
 
     public boolean dropItem(String itemName) {
         boolean canDropItem = false;

@@ -4,6 +4,7 @@ public class Map {
 
     private Room starterRoom;
 
+    //Muligvis gøres mere simpel og praktisk senere?
     public void initializeRooms() {
         ArrayList<Item> itemsInRoom1 = new ArrayList<>();
         itemsInRoom1.add(new Item("Item1", "Item1 description"));
