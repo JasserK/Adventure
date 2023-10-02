@@ -118,15 +118,15 @@ public class Room {
 
 
     public Item removeItem(String itemName) {
-        Item found = null;
+        Item foundItem = null;
         for (Item i : itemsInRoom) {
             if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
-                found = i;
+                foundItem = i;
             }
         }
-        if (found != null) {
-            itemsInRoom.remove(found);
+        if (foundItem != null) {
+            itemsInRoom.remove(foundItem);
         }
-        return found;
+        return foundItem;
     }
 }

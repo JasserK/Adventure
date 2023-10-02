@@ -122,21 +122,19 @@ public class Player {
     }
 
 
-
-
-
-
     public boolean dropItem(String itemName) {
-        boolean canDropItem = false;
+        Item foundItem = null;
         for (Item i : inventory) {
             if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
-                currentRoom.addItem(i);
-                inventory.remove(i);
-                canDropItem = true;
-                break;
+                foundItem = i;
             }
         }
-        return canDropItem;
+        if (foundItem != null) {
+            currentRoom.addItem(foundItem);
+            inventory.remove(foundItem);
+            return true;
+        }
+        return false;
     }
 
     public StringBuilder printInventory() {
