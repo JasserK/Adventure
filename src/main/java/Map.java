@@ -13,6 +13,7 @@ public class Map {
 
         ArrayList<Item> itemsInRoom2 = new ArrayList<>();
         itemsInRoom2.add(new Item("Item2", "Item2 description"));
+        itemsInRoom2.add(new Food("Food2", "Food2 description", 20));
         Room room2 = new Room("Room 2", true,"This is the light description for room 2.", "This is the dark description for room 2.", itemsInRoom2);
 
         ArrayList<Item> itemsInRoom3 = new ArrayList<>();

@@ -115,8 +115,6 @@ public class Room {
     }
 
 
-
-
     public Item removeItem(String itemName) {
         Item foundItem = null;
         for (Item i : itemsInRoom) {
@@ -129,4 +127,7 @@ public class Room {
         }
         return foundItem;
     }
+
+
+
 }

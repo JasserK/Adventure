@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Udvidet Help system samt refaktoreret kode. (Food klasse tilføjet)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
-    <list id="c56e2255-a518-42ca-a406-99a0dd8f71b1" name="Changes by Jasser" comment="Changes by Jasser" />
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="Changes by yusef" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

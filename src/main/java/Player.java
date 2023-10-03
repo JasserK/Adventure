@@ -5,6 +5,7 @@ public class Player {
     private Room currentRoom;
     private Room previousRoom = null;
     private ArrayList<Item> inventory = new ArrayList<>();
+    private int playerHealth; //----
 
     public boolean go(String direction) {
 
