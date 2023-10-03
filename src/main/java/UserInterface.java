@@ -31,6 +31,10 @@ public class UserInterface {
                     System.out.println(adventure.printPlayerInventory());
                     break;
 
+                case "health":
+                    System.out.println("Your current health is: " + adventure.playerHealth());
+                    break;
+
                 case "exit":
                     running = false;
                     System.out.println("You have tucked your tail between your legs, and ran away from battle!");
@@ -64,13 +68,31 @@ public class UserInterface {
 
                     case "drop":
                         if (subInput.length == 2)
-                        if (adventure.playerDropsItem(subInput[1])) {
-                            System.out.println(firstLetterToUpperCase(subInput[1]) + " dropped" );
-                        } else {
-                            System.out.println("No such item in inventory");
-                        }
+                            if (adventure.playerDropsItem(subInput[1])) {
+                                System.out.println(firstLetterToUpperCase(subInput[1]) + " dropped");
+                            } else {
+                                System.out.println("No such item in inventory");
+                            }
                         else
                             invalidCommandPrompt();
+                        break;
+
+                    case "eat":
+                        switch (adventure.playerEatsFood(subInput[1])) {
+
+                            case OK: {
+                                System.out.println("You have eaten " + subInput[1]);
+                                break;
+                            }
+                            case CANT: {
+                                System.out.println("You cannot eat " + subInput[1]);
+                                break;
+                            }
+                            case NOT_FOUND: {
+                                System.out.println(subInput[1] + " not found");
+                                break;
+                            }
+                        }
                         break;
 
                     case "go":

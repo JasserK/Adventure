@@ -21,7 +21,7 @@ public class Map {
         Room room3 = new Room("Room 3", false,"This is the light description for room 3.", "This is the dark description for room 3.", itemsInRoom3);
 
         ArrayList<Item> itemsInRoom4 = new ArrayList<>();
-        itemsInRoom4.add(new Food("Mario mushroom", "What is this doing here?", 100));
+        itemsInRoom4.add(new Food("Mario_mushroom", "What is this doing here?", 100));
         Room room4 = new Room("Room 4", false,"This is the light description for room 4.", "This is the dark description for room 4.", itemsInRoom4);
 
         ArrayList<Item> itemsInRoom5 = new ArrayList<>();
@@ -34,7 +34,7 @@ public class Map {
         Room room6 = new Room("Room 6", false,"This is the light description for room 6.", "This is the dark description for room 6.", itemsInRoom6);
 
         ArrayList<Item> itemsInRoom7 = new ArrayList<>();
-        itemsInRoom7.add(new Food("Crystal meth", "Walter White wouldn't be happy about this..", -50));
+        itemsInRoom7.add(new Food("Crystal_meth", "Walter White wouldn't be happy about this..", -50));
         Room room7 = new Room("Room 7", false,"This is the light description for room 7.", "This is the dark description for room 7.", itemsInRoom7);
 
         ArrayList<Item> itemsInRoom8 = new ArrayList<>();
@@ -54,8 +54,8 @@ public class Map {
         Room.setRoomConnections(room5, null, room8, null, null);
         Room.setRoomConnections(room6, room3, room9, null, null);
         Room.setRoomConnections(room7, room4, null, room8, null);
-        Room.setRoomConnections(room8, room5, null, room7, room9);
-        Room.setRoomConnections(room9, room6, null, room8, null);
+        Room.setRoomConnections(room8, room5, null, room9, room7);
+        Room.setRoomConnections(room9, room6, null, null, room8);
 
 
 

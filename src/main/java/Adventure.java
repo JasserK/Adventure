@@ -31,4 +31,11 @@ public class Adventure {
     public StringBuilder printPlayerInventory () {
         return player.printInventory();
     }
+
+    public ReturnMessage playerEatsFood (String itemName) {
+        return player.eatItem(itemName);
+    }
+    public int playerHealth () {
+        return player.getPlayerHealth();
+    }
 }

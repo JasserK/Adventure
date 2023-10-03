@@ -5,7 +5,9 @@ public class Player {
     private Room currentRoom;
     private Room previousRoom = null;
     private ArrayList<Item> inventory = new ArrayList<>();
-    private int playerHealth; //----
+    private int playerHealth = 80;
+    private final int MAX_HEALTH = 100;
+
 
     public boolean go(String direction) {
 
@@ -88,23 +90,6 @@ public class Player {
     }
 
 
-    public Room getCurrentRoom() {
-        return currentRoom;
-    }
-
-    public Room getPreviousRoom() {
-        return previousRoom;
-    }
-
-    public void setCurrentRoom(Room currentRoom) {
-        this.currentRoom = currentRoom;
-    }
-
-    public void setPreviousRoom(Room previousRoom) {
-        this.previousRoom = previousRoom;
-    }
-
-
     public ArrayList<Item> getInventory() {
         return inventory;
     }
@@ -120,6 +105,29 @@ public class Player {
 
         }
 
+    }
+
+    public ReturnMessage eatItem(String itemName) {
+        Item found = null;
+
+        for (Item i : inventory) {
+            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+                found = i;
+            }
+        }
+
+        if (found != null) {
+            if (found instanceof Food) {
+                playerHealth += ((Food) found).getHealth();
+                if (playerHealth > MAX_HEALTH)
+                    playerHealth = MAX_HEALTH;
+                inventory.remove(found);
+
+                return ReturnMessage.OK;
+
+            } else return ReturnMessage.CANT;
+        }
+        return ReturnMessage.NOT_FOUND;
     }
 
 
@@ -138,6 +146,7 @@ public class Player {
         return false;
     }
 
+
     public StringBuilder printInventory() {
         StringBuilder print = new StringBuilder("Inventory:");
 
@@ -150,6 +159,28 @@ public class Player {
         }
         return print;
     }
+
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public Room getPreviousRoom() {
+        return previousRoom;
+    }
+
+    public int getPlayerHealth() {
+        return playerHealth;
+    }
+
+    public void setCurrentRoom(Room currentRoom) {
+        this.currentRoom = currentRoom;
+    }
+
+    public void setPreviousRoom(Room previousRoom) {
+        this.previousRoom = previousRoom;
+    }
+
 
 }
 
