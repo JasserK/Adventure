@@ -8,7 +8,7 @@ public class Adventure {
 
     }
 
-    public boolean playerMoves(String direction) {
+    public ReturnMessage playerMoves(String direction) {
         return player.go(direction);
     }
 
@@ -16,7 +16,7 @@ public class Adventure {
         return player.look();
     }
 
-    public String lookDirection(String direction) {
+    public Room lookDirection(String direction) {
         return player.lookDirection(direction);
     }
 
@@ -38,4 +38,8 @@ public class Adventure {
     public int playerHealth () {
         return player.getPlayerHealth();
     }
+public int playerMinHealth () {
+        return player.getMIN_HEALTH();
+    }
+
 }

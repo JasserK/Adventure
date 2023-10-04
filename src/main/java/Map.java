@@ -8,6 +8,8 @@ public class Map {
     public void initializeRooms() {
         ArrayList<Item> itemsInRoom1 = new ArrayList<>();
         itemsInRoom1.add(new Item("Item1", "Item1 description"));
+        itemsInRoom1.add(new Food("Bad1", "Bad food1 description", -100));
+        itemsInRoom1.add(new RangedWeapon("Gun1", "Gun1 description", 30, 10));
         Room room1 = new Room("Room 1", false,"This is the light description for room 1.", "This is the dark description for room 1.", itemsInRoom1);
 
         ArrayList<Item> itemsInRoom2 = new ArrayList<>();
@@ -21,7 +23,7 @@ public class Map {
         Room room3 = new Room("Room 3", false,"This is the light description for room 3.", "This is the dark description for room 3.", itemsInRoom3);
 
         ArrayList<Item> itemsInRoom4 = new ArrayList<>();
-        itemsInRoom4.add(new Food("Mario_mushroom", "What is this doing here?", 100));
+        itemsInRoom4.add(new Food("Mario mushroom", "What is this doing here?", 100));
         Room room4 = new Room("Room 4", false,"This is the light description for room 4.", "This is the dark description for room 4.", itemsInRoom4);
 
         ArrayList<Item> itemsInRoom5 = new ArrayList<>();
@@ -34,7 +36,7 @@ public class Map {
         Room room6 = new Room("Room 6", false,"This is the light description for room 6.", "This is the dark description for room 6.", itemsInRoom6);
 
         ArrayList<Item> itemsInRoom7 = new ArrayList<>();
-        itemsInRoom7.add(new Food("Crystal_meth", "Walter White wouldn't be happy about this..", -50));
+        itemsInRoom7.add(new Food("Crystal meth", "Walter White wouldn't be happy about this..", -50));
         Room room7 = new Room("Room 7", false,"This is the light description for room 7.", "This is the dark description for room 7.", itemsInRoom7);
 
         ArrayList<Item> itemsInRoom8 = new ArrayList<>();

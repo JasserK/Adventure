@@ -7,81 +7,99 @@ public class Player {
     private ArrayList<Item> inventory = new ArrayList<>();
     private int playerHealth = 80;
     private final int MAX_HEALTH = 100;
+    private final int MIN_HEALTH = 0;
 
 
-    public boolean go(String direction) {
-
-        boolean canGo = false;
-
+    public ReturnMessage go(String direction) {
+        ReturnMessage result = ReturnMessage.OK;
         switch (direction) {
-            case "n":
-            case "north":
+            case "b", "back":
+                if (previousRoom == null ) {
+                    result = ReturnMessage.CANT;
+                } else {
+                    Room tempCurrentRoom = currentRoom;
+                    currentRoom = previousRoom;
+                    previousRoom = tempCurrentRoom;
+                }
+                break;
 
-                if (currentRoom.getNorth() != null) {
+            case "n", "north":
+
+                if (currentRoom.getNorth() == null || currentRoom.isDark()) {
+                    result = ReturnMessage.CANT;
+                } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getNorth();
-                    canGo = true;
                 }
-
                 break;
 
-            case "s":
-            case "south":
+            case "s", "south":
 
-
-                if (currentRoom.getSouth() != null) {
+                if (currentRoom.getSouth() == null || currentRoom.isDark()) {
+                    result = ReturnMessage.CANT;
+                } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getSouth();
-                    canGo = true;
                 }
-
                 break;
 
-            case "e":
-            case "east":
+            case "e", "east":
 
-
-                if (currentRoom.getEast() != null) {
+                if (currentRoom.getEast() == null || currentRoom.isDark()) {
+                    result = ReturnMessage.CANT;
+                } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getEast();
-                    canGo = true;
                 }
-
                 break;
 
-            case "w":
-            case "west":
+            case "w", "west":
 
-
-                if (currentRoom.getWest() != null) {
+                if (currentRoom.getWest() == null || currentRoom.isDark()) {
+                    result = ReturnMessage.CANT;
+                } else {
                     previousRoom = currentRoom;
                     currentRoom = currentRoom.getWest();
-                    canGo = true;
                 }
-
                 break;
 
             default:
+                result = ReturnMessage.NOT_FOUND;
                 break;
         }
-        return canGo;
+        return result;
     }
 
 
-    public String lookDirection(String direction) {
-        String message;
-        if (previousRoom == null)
-            message = "You haven't moved yet.";
-        else {
+    public Room lookDirection(String direction) {
+        Room lookingAt = null;
+        if (!currentRoom.isDark()) {
             switch (direction) {
-                case "back":
-                    message = previousRoom.getName();
+                case "b", "back":
+                    lookingAt = previousRoom;
                     break;
+
+                case "n", "north":
+                    lookingAt = currentRoom.getNorth();
+                    break;
+
+                case "s", "south":
+                    lookingAt = currentRoom.getSouth();
+                    break;
+
+                case "e", "east":
+                    lookingAt = currentRoom.getEast();
+                    break;
+
+                case "w", "west":
+                    lookingAt = currentRoom.getWest();
+                    break;
+
                 default:
-                    message = "You cannot look that way.";
             }
         }
-        return message;
+
+        return lookingAt;
     }
 
     public String look() {
@@ -171,6 +189,10 @@ public class Player {
 
     public int getPlayerHealth() {
         return playerHealth;
+    }
+
+    public int getMIN_HEALTH() {
+        return MIN_HEALTH;
     }
 
     public void setCurrentRoom(Room currentRoom) {
