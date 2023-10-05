@@ -182,31 +182,13 @@ public class Player {
         return print;
     }
 
-
-    public Room getCurrentRoom() {
-        return currentRoom;
-    }
-
-    public Room getPreviousRoom() {
-        return previousRoom;
-    }
-
     public int getPlayerHealth() {
         return playerHealth;
     }
 
-    public int getMIN_HEALTH() {
-        return MIN_HEALTH;
-    }
-
-    public void setCurrentRoom(Room currentRoom) {
+    public void setCurrentRoom(Room currentRoom) {//Bruges når ny adventure startes og currentRoom til starterRoom
         this.currentRoom = currentRoom;
     }
-
-    public void setPreviousRoom(Room previousRoom) {
-        this.previousRoom = previousRoom;
-    }
-
 
 }
 
