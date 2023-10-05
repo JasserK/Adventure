@@ -5,6 +5,14 @@ public abstract class Weapon extends Item {
         this.damage = damage;
     }
 
+    public abstract int remainingUses ();
+
+
+
+    public void useAmmo () {
+
+    }
+
     @Override
     public String toString() {
         return super.toString() + "\nDamage: " + damage;

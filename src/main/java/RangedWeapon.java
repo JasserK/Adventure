@@ -5,6 +5,15 @@ public class RangedWeapon extends Weapon {
         this.ammo = ammo;
     }
 
+    @Override
+    public void useAmmo() {
+        ammo--;
+    }
+
+    @Override
+    public int remainingUses() {
+        return ammo;
+    }
 
     @Override
     public String toString() {

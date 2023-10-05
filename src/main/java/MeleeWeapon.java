@@ -4,6 +4,11 @@ public class MeleeWeapon extends Weapon {
         super(name, description, damage);
     }
 
+    @Override
+    public int remainingUses() {
+        return 1;
+    }
+
 
     @Override
     public String toString() {

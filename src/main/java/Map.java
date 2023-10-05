@@ -6,10 +6,13 @@ public class Map {
 
     //Muligvis gøres mere simpel og praktisk senere?
     public void initializeRooms() {
+        ArrayList<Enemy> enemiesInRoom1 = new ArrayList<>();
+        enemiesInRoom1.add(new Enemy("Grim fyr", 100));
         ArrayList<Item> itemsInRoom1 = new ArrayList<>();
         itemsInRoom1.add(new Item("Item1", "Item1 description"));
         itemsInRoom1.add(new Food("Bad1", "Bad food1 description", -100));
-        itemsInRoom1.add(new RangedWeapon("Gun1", "Gun1 description", 30, 10));
+        itemsInRoom1.add(new RangedWeapon("Dessert Eagle", "You are practicing your second amendment.", 30, 2));
+        itemsInRoom1.add(new MeleeWeapon("Sword1", "Sword1 description", 20));
         Room room1 = new Room("Room 1", false,"This is the light description for room 1.", "This is the dark description for room 1.", itemsInRoom1);
 
         ArrayList<Item> itemsInRoom2 = new ArrayList<>();

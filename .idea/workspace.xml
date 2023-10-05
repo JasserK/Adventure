@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Ændringer af Christoffer&#10;&#10;Dø funktion&#10;&#10;Tilføjet lidt farver til tekst &#10;&#10;Tilføjet weapon klasser&#10;&#10;Ændret go og look funktioner&#10;&#10;Gjort det muligt at lave item bestående af flere ord.">
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Slettet getters og setters">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
     </list>
-    <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="Changes by yusef" />
+    <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="Changes by yusef">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Colour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Colour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +85,7 @@
       <workItem from="1695987216503" duration="7195000" />
       <workItem from="1696070396740" duration="11373000" />
       <workItem from="1696416728928" duration="17245000" />
-      <workItem from="1696486670333" duration="4733000" />
+      <workItem from="1696486670333" duration="15461000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -191,7 +199,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696435997743</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ændret isDead til isAlive">
+      <option name="closed" value="true" />
+      <created>1696491460306</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696491460306</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Slettet getters og setters">
+      <option name="closed" value="true" />
+      <created>1696492324875</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1696492324875</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +245,8 @@
     <MESSAGE value="Food class done" />
     <MESSAGE value="Delopgave 3 done" />
     <MESSAGE value="Ændringer af Christoffer&#10;Dø funktion&#10;&#10;Tilføjet lidt farver til tekst &#10;&#10;Tilføjet weapon klasser&#10;&#10;Ændret go og look funktioner&#10;&#10;Gjort det muligt at lave item bestående af flere ord." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændringer af Christoffer&#10;Dø funktion&#10;&#10;Tilføjet lidt farver til tekst &#10;&#10;Tilføjet weapon klasser&#10;&#10;Ændret go og look funktioner&#10;&#10;Gjort det muligt at lave item bestående af flere ord." />
+    <MESSAGE value="Ændret isDead til isAlive" />
+    <MESSAGE value="Slettet getters og setters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slettet getters og setters" />
   </component>
 </project>

@@ -30,8 +30,30 @@ public class UserInterface {
                         System.out.println(adventure.printPlayerInventory());
                         break;
 
+                    case "equipped":
+                        System.out.println(adventure.printPlayerEquipped());
+                        break;
+
                     case "health":
                         System.out.println("Your current health is: " + adventure.playerHealth());
+                        break;
+
+                    case "attack", "a":
+
+                        switch (adventure.playerAttacks()) {
+                            case OK:
+                                System.out.println("You are attacking: ");
+                                break;
+                            case CANT:
+                                System.out.println("You have no ammo..");
+                                break;
+                            case NOT_FOUND:
+                                System.out.println("No weapons equipped");
+                                break;
+
+                        }
+
+
                         break;
 
                     case "exit":
@@ -72,6 +94,14 @@ public class UserInterface {
                             System.out.println("No such item in inventory");
                         }
 
+                        break;
+
+                    case "equip", "e":
+                        switch (adventure.playerEquipsWeapon(inputSplit[1])) {
+                            case OK -> System.out.println("You have equipped " + inputSplit[1]);
+                            case CANT -> System.out.println("You cannot equip " + inputSplit[1]);
+                            case NOT_FOUND -> System.out.println(inputSplit[1] + " not found");
+                        }
                         break;
 
                     case "eat":

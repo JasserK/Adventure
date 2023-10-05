@@ -8,7 +8,7 @@ public class Player {
     private int playerHealth = 80;
     private final int MAX_HEALTH = 100;
     private final int MIN_HEALTH = 0;
-
+    private Weapon equipped;
 
     public ReturnMessage go(String direction) {
         ReturnMessage result = ReturnMessage.OK;
@@ -164,6 +164,45 @@ public class Player {
         return false;
     }
 
+
+    public ReturnMessage equip(String itemName) {
+        Item found = null;
+
+        for (Item i : inventory) {
+            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+                found = i;
+            }
+        }
+        if (found != null) {
+            if (found instanceof Weapon) {
+                if (equipped != null) {
+                    inventory.add(equipped);
+                }
+                equipped = (Weapon) found;
+                inventory.remove(found);
+                return ReturnMessage.OK;
+
+            } else return ReturnMessage.CANT;
+        }
+        return ReturnMessage.NOT_FOUND;
+    }
+
+    public ReturnMessage attack(/*Enemy enemy*/) {
+        if (equipped != null) {
+
+            if (equipped.remainingUses() > 0) {
+                //enemy.health -= equipped.damage;
+                equipped.useAmmo();
+                return ReturnMessage.OK;
+            } else {
+                return ReturnMessage.CANT;
+
+            }
+        }
+        return ReturnMessage.NOT_FOUND;
+    }
+
+
     public boolean isAlive() {
         return playerHealth > MIN_HEALTH;
     }
@@ -181,6 +220,18 @@ public class Player {
         }
         return print;
     }
+
+    public StringBuilder printEquipped() {
+        StringBuilder print = new StringBuilder("Equipped:");
+
+        if (equipped == null) {
+            print.append("\nEmpty");
+        } else {
+            print.append("\n").append(equipped.toString());
+        }
+        return print;
+    }
+
 
     public int getPlayerHealth() {
         return playerHealth;

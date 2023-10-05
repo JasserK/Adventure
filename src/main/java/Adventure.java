@@ -20,28 +20,43 @@ public class Adventure {
         return player.lookDirection(direction);
     }
 
-    public boolean playerPicksUpItem (String itemName) {
+    public boolean playerPicksUpItem(String itemName) {
         return player.takeItem(itemName);
     }
 
-    public boolean playerDropsItem (String itemName) {
+    public boolean playerDropsItem(String itemName) {
         return player.dropItem(itemName);
     }
 
-    public StringBuilder printPlayerInventory () {
+    public ReturnMessage playerEquipsWeapon(String weaponName) {
+        return player.equip(weaponName);
+    }
+
+    public StringBuilder printPlayerInventory() {
         return player.printInventory();
     }
 
-    public ReturnMessage playerEatsFood (String itemName) {
+public StringBuilder printPlayerEquipped() {
+        return player.printEquipped();
+    }
+
+
+    public ReturnMessage playerEatsFood(String itemName) {
         return player.eatItem(itemName);
+    }
+
+    public ReturnMessage playerAttacks() {
+        return player.attack();
     }
 
     public boolean playerIsAlive() {
         return player.isAlive();
     }
-    public int playerHealth () {
+
+    public int playerHealth() {
         return player.getPlayerHealth();
     }
+
 
 
 }
