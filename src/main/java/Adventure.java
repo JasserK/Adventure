@@ -35,11 +35,13 @@ public class Adventure {
     public ReturnMessage playerEatsFood (String itemName) {
         return player.eatItem(itemName);
     }
+
+    public boolean playerIsAlive() {
+        return player.isAlive();
+    }
     public int playerHealth () {
         return player.getPlayerHealth();
     }
-public int playerMinHealth () {
-        return player.getMIN_HEALTH();
-    }
+
 
 }

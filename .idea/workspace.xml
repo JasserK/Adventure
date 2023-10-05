@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Delopgave 3 done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Colour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MeleeWeapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RangedWeapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Ændringer af Christoffer&#10;&#10;Dø funktion&#10;&#10;Tilføjet lidt farver til tekst &#10;&#10;Tilføjet weapon klasser&#10;&#10;Ændret go og look funktioner&#10;&#10;Gjort det muligt at lave item bestående af flere ord.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Weapon.java" afterDir="false" />
     </list>
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="Changes by yusef" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -43,22 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Chris/IdeaProjects/KageOpskriftChristofferEndelig",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Chris/IdeaProjects/KageOpskriftChristofferEndelig&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,7 +76,8 @@
       <workItem from="1695968374396" duration="12732000" />
       <workItem from="1695987216503" duration="7195000" />
       <workItem from="1696070396740" duration="11373000" />
-      <workItem from="1696416728928" duration="16880000" />
+      <workItem from="1696416728928" duration="17245000" />
+      <workItem from="1696486670333" duration="4733000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -185,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696341471213</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Ændringer af Christoffer&#10;Dø funktion&#10;&#10;Tilføjet lidt farver til tekst &#10;&#10;Tilføjet weapon klasser&#10;&#10;Ændret go og look funktioner&#10;&#10;Gjort det muligt at lave item bestående af flere ord.">
+      <option name="closed" value="true" />
+      <created>1696435997743</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696435997743</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +220,7 @@
     <MESSAGE value="Udvidet Help system samt refaktoreret kode. (Food klasse tilføjet)" />
     <MESSAGE value="Food class done" />
     <MESSAGE value="Delopgave 3 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delopgave 3 done" />
+    <MESSAGE value="Ændringer af Christoffer&#10;Dø funktion&#10;&#10;Tilføjet lidt farver til tekst &#10;&#10;Tilføjet weapon klasser&#10;&#10;Ændret go og look funktioner&#10;&#10;Gjort det muligt at lave item bestående af flere ord." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændringer af Christoffer&#10;Dø funktion&#10;&#10;Tilføjet lidt farver til tekst &#10;&#10;Tilføjet weapon klasser&#10;&#10;Ændret go og look funktioner&#10;&#10;Gjort det muligt at lave item bestående af flere ord." />
   </component>
 </project>

@@ -14,7 +14,7 @@ public class Player {
         ReturnMessage result = ReturnMessage.OK;
         switch (direction) {
             case "b", "back":
-                if (previousRoom == null ) {
+                if (previousRoom == null) {
                     result = ReturnMessage.CANT;
                 } else {
                     Room tempCurrentRoom = currentRoom;
@@ -162,6 +162,10 @@ public class Player {
             return true;
         }
         return false;
+    }
+
+    public boolean isAlive() {
+        return playerHealth > MIN_HEALTH;
     }
 
 
