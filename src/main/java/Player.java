@@ -164,7 +164,6 @@ public class Player {
         return false;
     }
 
-
     public ReturnMessage equip(String itemName) {
         Item found = null;
 
@@ -186,6 +185,38 @@ public class Player {
         }
         return ReturnMessage.NOT_FOUND;
     }
+
+ /*
+
+    public EquipDTO equip(String itemName) {
+        Item found = null;
+        EquipDTO equipDTO;
+
+        for (Item i : inventory) {
+            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+                found = i;
+            }
+        }
+        if (found != null) {
+            if (found instanceof Weapon) {
+                if (equipped != null) {
+                    inventory.add(equipped);
+                }
+                equipped = (Weapon) found;
+                inventory.remove(found);
+                equipDTO = new EquipDTO(ReturnMessage.OK,found);
+                return equipDTO;
+
+            } else{
+                equipDTO = new EquipDTO(ReturnMessage.CANT,found);
+                return equipDTO;
+            }
+        }
+        equipDTO = new EquipDTO(ReturnMessage.NOT_FOUND,null);
+        return equipDTO;
+    }
+
+  */
 
     public ReturnMessage attack(/*Enemy enemy*/) {
         if (equipped != null) {

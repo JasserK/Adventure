@@ -6,15 +6,13 @@ public class RangedWeapon extends Weapon {
     }
 
     @Override
-    public void useAmmo() {
-        ammo--;
-    }
-
-    @Override
     public int remainingUses() {
         return ammo;
     }
-
+    @Override
+    public void useAmmo() {
+        ammo--;
+    }
     @Override
     public String toString() {
         return super.toString() + "\nAmmo: " + ammo;

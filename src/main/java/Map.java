@@ -11,7 +11,7 @@ public class Map {
         ArrayList<Item> itemsInRoom1 = new ArrayList<>();
         itemsInRoom1.add(new Item("Item1", "Item1 description"));
         itemsInRoom1.add(new Food("Bad1", "Bad food1 description", -100));
-        itemsInRoom1.add(new RangedWeapon("Dessert Eagle", "You are practicing your second amendment.", 30, 2));
+        itemsInRoom1.add(new RangedWeapon("Desert Eagle", "You are practicing your second amendment.", 30, 2));
         itemsInRoom1.add(new MeleeWeapon("Sword1", "Sword1 description", 20));
         Room room1 = new Room("Room 1", false,"This is the light description for room 1.", "This is the dark description for room 1.", itemsInRoom1);
 

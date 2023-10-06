@@ -8,10 +8,7 @@ public abstract class Weapon extends Item {
     public abstract int remainingUses ();
 
 
-
-    public void useAmmo () {
-
-    }
+    public abstract void useAmmo();
 
     @Override
     public String toString() {

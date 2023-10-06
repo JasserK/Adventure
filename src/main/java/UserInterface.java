@@ -26,11 +26,11 @@ public class UserInterface {
                         showHelp();
                         break;
 
-                    case "inventory":
+                    case "inventory", "i":
                         System.out.println(adventure.printPlayerInventory());
                         break;
 
-                    case "equipped":
+                    case "equipped", "e":
                         System.out.println(adventure.printPlayerEquipped());
                         break;
 
@@ -56,7 +56,7 @@ public class UserInterface {
 
                         break;
 
-                    case "exit":
+                    case "exit", "quit":
                         running = false;
                         System.out.println("You have tucked your tail between your legs, and ran away from battle!");
                         break;
@@ -177,15 +177,18 @@ public class UserInterface {
 
 
         sb.append("Possible directions: " + Colour.ANSI_BLUE + "(n/north) / (s/south) / (e/east) / (w/west) / (b/back)\n" + Colour.ANSI_RESET);
-        sb.append(Colour.ANSI_BLUE + "look" + Colour.ANSI_RESET + ": Get description of the current room\n");
-        sb.append(Colour.ANSI_BLUE + "look (direction)" + Colour.ANSI_RESET + ": Name of the room in said direction\n");
-        sb.append(Colour.ANSI_BLUE + "go (direction)" + Colour.ANSI_RESET + ": Character goes said direction\n");
+        sb.append(Colour.ANSI_BLUE + "look" + Colour.ANSI_RESET + ":               Get description of the current room\n");
+        sb.append(Colour.ANSI_BLUE + "look (direction)" + Colour.ANSI_RESET + ":   Name of the room in said direction\n");
+        sb.append(Colour.ANSI_BLUE + "go (direction)" + Colour.ANSI_RESET + ":     Character goes said direction\n");
 
-        sb.append(Colour.ANSI_BLUE + "inventory" + Colour.ANSI_RESET + ": Checks the player's inventory\n");
-        sb.append(Colour.ANSI_BLUE + "health" + Colour.ANSI_RESET + ": Checks the player's health level\n");
-        sb.append(Colour.ANSI_BLUE + "take (Item)" + Colour.ANSI_RESET + ": Takes said item in the room\n");
-        sb.append(Colour.ANSI_BLUE + "drop (Item)" + Colour.ANSI_RESET + ": Drops said item from player's inventory\n");
-        sb.append(Colour.ANSI_BLUE + "exit" + Colour.ANSI_RESET + ": Exits program");
+        sb.append(Colour.ANSI_BLUE + "i / inventory" + Colour.ANSI_RESET + ":      Checks the player's inventory\n");
+        sb.append(Colour.ANSI_BLUE + "e / equipped" + Colour.ANSI_RESET + ":       Checks equipped weapon\n");
+        sb.append(Colour.ANSI_BLUE + "health" + Colour.ANSI_RESET + ":             Checks the player's health level\n");
+        sb.append(Colour.ANSI_BLUE + "take (Item)" + Colour.ANSI_RESET + ":        Takes said item in the room\n");
+        sb.append(Colour.ANSI_BLUE + "drop (Item)" + Colour.ANSI_RESET + ":        Drops said item from player's inventory\n");
+        sb.append(Colour.ANSI_BLUE + "e / equip (Weapon)" + Colour.ANSI_RESET + ": Equips weapon from player's inventory\n");
+        sb.append(Colour.ANSI_BLUE + "a / attack" + Colour.ANSI_RESET + ":         Attacks\n");
+        sb.append(Colour.ANSI_BLUE + "exit / quit" + Colour.ANSI_RESET + ":        Exits program");
         System.out.println(sb);
 
     }
@@ -199,7 +202,13 @@ public class UserInterface {
         if (input == null || input.isEmpty()) {
             return input; // Returner uændret hvis strengen er tom eller null
         }
-        return input.substring(0, 1).toUpperCase() + input.substring(1);
+        String[] stringArray = input.split(" ");
+        String dessertEagle = "";
+        for (String string : stringArray) {
+            dessertEagle += string.substring(0, 1).toUpperCase() + string.substring(1) + " ";
+        }
+        return dessertEagle.trim();
+
     }
 
 }
