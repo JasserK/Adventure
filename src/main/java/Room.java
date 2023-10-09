@@ -11,14 +11,16 @@ public class Room {
     private String darkDescription;
     private boolean isDark;
     private ArrayList<Item> itemsInRoom;
+    private ArrayList<Enemy> enemiesInRoom;
 
 
-    public Room(String name, boolean isDark, String lightDescription, String darkDescription, ArrayList<Item> itemsInRoom) {
+    public Room(String name, boolean isDark, String lightDescription, String darkDescription, ArrayList<Item> itemsInRoom, ArrayList<Enemy> enemiesInRoom) {
         this.name = name;
         this.isDark = isDark;
         this.lightDescription = lightDescription;
         this.darkDescription = darkDescription;
         this.itemsInRoom = itemsInRoom;
+        this.enemiesInRoom = enemiesInRoom;
     }
 
     // Metode til at sætte rummenes connections
@@ -86,7 +88,13 @@ public class Room {
         this.west = west;
     }
 
+    public void setItemsInRoom(ArrayList<Item> itemsInRoom) {
+        this.itemsInRoom = itemsInRoom;
+    }
 
+    public void setEnemiesInRoom(ArrayList<Enemy> enemiesInRoom) {
+        this.enemiesInRoom = enemiesInRoom;
+    }
 
     //ToString
     @Override
