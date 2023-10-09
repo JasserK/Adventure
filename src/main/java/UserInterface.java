@@ -206,11 +206,11 @@ public class UserInterface {
             return input; // Returner uændret hvis strengen er tom eller null
         }
         String[] stringArray = input.split(" ");
-        String dessertEagle = "";
+        String strings = "";
         for (String string : stringArray) {
-            dessertEagle += string.substring(0, 1).toUpperCase() + string.substring(1) + " ";
+            strings += string.substring(0, 1).toUpperCase() + string.substring(1) + " ";
         }
-        return dessertEagle.trim();
+        return strings.trim();
 
     }
 
