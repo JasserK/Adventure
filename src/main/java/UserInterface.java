@@ -97,9 +97,12 @@ public class UserInterface {
                         break;
 
                     case "equip", "e":
-                        switch (adventure.playerEquipsWeapon(inputSplit[1])) {
-                            case OK -> System.out.println("You have equipped " + inputSplit[1]);
-                            case CANT -> System.out.println("You cannot equip " + inputSplit[1]);
+                        String equipInput = inputSplit[1];
+                        EnumAndObjectDTO equipDTO = adventure.playerEquipsWeapon(equipInput);
+
+                        switch (equipDTO.getReturnMessage()) {
+                            case OK -> System.out.println("You have equipped " + equipDTO.getItem().getName());
+                            case CANT -> System.out.println("You cannot equip " + equipDTO.getItem().getName());
                             case NOT_FOUND -> System.out.println(inputSplit[1] + " not found");
                         }
                         break;

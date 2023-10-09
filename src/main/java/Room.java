@@ -96,7 +96,7 @@ public class Room {
         if (!isDark && !itemsInRoom.isEmpty()) { // Hvis det ER lyst og der ER items i rummet:
             description += "\nBehold! Items in the room:";
             for (Item item : itemsInRoom) {
-                description += "\n- " + item.getItemName();
+                description += "\n- " + item.getName();
             }
         }
         else if (!isDark) { // Hvis det ER lyst og der IKKE er items i rummet:
@@ -118,7 +118,7 @@ public class Room {
     public Item removeItem(String itemName) {
         Item foundItem = null;
         for (Item i : itemsInRoom) {
-            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+            if (itemName.trim().equalsIgnoreCase(i.getName())) {
                 foundItem = i;
             }
         }

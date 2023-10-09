@@ -129,7 +129,7 @@ public class Player {
         Item found = null;
 
         for (Item i : inventory) {
-            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+            if (itemName.trim().equalsIgnoreCase(i.getName())) {
                 found = i;
             }
         }
@@ -152,7 +152,7 @@ public class Player {
     public boolean dropItem(String itemName) {
         Item foundItem = null;
         for (Item i : inventory) {
-            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+            if (itemName.trim().equalsIgnoreCase(i.getName())) {
                 foundItem = i;
             }
         }
@@ -163,12 +163,37 @@ public class Player {
         }
         return false;
     }
+   // Gammel equip metode
+   // public ReturnMessage equip(String itemName) {
+   //     Item found = null;
+   //
+   //     for (Item i : inventory) {
+   //         if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+   //             found = i;
+   //         }
+   //     }
+   //     if (found != null) {
+   //         if (found instanceof Weapon) {
+   //             if (equipped != null) {
+   //                 inventory.add(equipped);
+   //             }
+   //             equipped = (Weapon) found;
+   //             inventory.remove(found);
+   //             return ReturnMessage.OK;
+   //
+   //         } else return ReturnMessage.CANT;
+   //     }
+   //     return ReturnMessage.NOT_FOUND;
+   // }
 
-    public ReturnMessage equip(String itemName) {
+
+
+    public EnumAndObjectDTO equip(String itemName) {
+
+        EnumAndObjectDTO equipDTO;
         Item found = null;
-
         for (Item i : inventory) {
-            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
+            if (itemName.trim().equalsIgnoreCase(i.getName())) {
                 found = i;
             }
         }
@@ -179,44 +204,19 @@ public class Player {
                 }
                 equipped = (Weapon) found;
                 inventory.remove(found);
-                return ReturnMessage.OK;
-
-            } else return ReturnMessage.CANT;
-        }
-        return ReturnMessage.NOT_FOUND;
-    }
-
- /*
-
-    public EquipDTO equip(String itemName) {
-        Item found = null;
-        EquipDTO equipDTO;
-
-        for (Item i : inventory) {
-            if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
-                found = i;
-            }
-        }
-        if (found != null) {
-            if (found instanceof Weapon) {
-                if (equipped != null) {
-                    inventory.add(equipped);
-                }
-                equipped = (Weapon) found;
-                inventory.remove(found);
-                equipDTO = new EquipDTO(ReturnMessage.OK,found);
+                equipDTO = new EnumAndObjectDTO (ReturnMessage.OK,found);
                 return equipDTO;
 
             } else{
-                equipDTO = new EquipDTO(ReturnMessage.CANT,found);
+                equipDTO = new EnumAndObjectDTO (ReturnMessage.CANT,found);
                 return equipDTO;
             }
         }
-        equipDTO = new EquipDTO(ReturnMessage.NOT_FOUND,null);
+        equipDTO = new EnumAndObjectDTO (ReturnMessage.NOT_FOUND,found);
         return equipDTO;
     }
 
-  */
+
 
     public ReturnMessage attack(/*Enemy enemy*/) {
         if (equipped != null) {

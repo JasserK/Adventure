@@ -9,10 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Delopgave 4 in done">
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Ændret .bat fil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Adventure_jar/Adventure.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Adventure_jar/Adventure.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Adventure_jar/launcher.bat" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Adventure_jar/launcher.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EquipDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnumAndObjectDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="Changes by yusef delopgave 4 in progress" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +105,8 @@
       <workItem from="1696573294818" duration="8743000" />
       <workItem from="1696584843060" duration="114000" />
       <workItem from="1696689103528" duration="270000" />
+      <workItem from="1696689787091" duration="56000" />
+      <workItem from="1696835349717" duration="3600000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -254,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696584695834</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Ændret .bat fil">
+      <option name="closed" value="true" />
+      <created>1696689823451</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696689823451</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +303,7 @@
     <MESSAGE value="Delopgave 4 in progress" />
     <MESSAGE value="Changes by yusef delopgave 4 in progress" />
     <MESSAGE value="Delopgave 4 in done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delopgave 4 in done" />
+    <MESSAGE value="Ændret .bat fil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændret .bat fil" />
   </component>
 </project>
