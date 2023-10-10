@@ -10,6 +10,7 @@ public class UserInterface {
     public void startProgram() {
 
         System.out.println(startMessage());
+        System.out.println(adventure.playerEntersRoom());
         while (running) {
 
 
@@ -19,7 +20,7 @@ public class UserInterface {
             if (inputSplit.length <= 1) { //Håndterer kommandoer med kun ét eller nul ord
                 switch (input) {
                     case "look": // Få description af current room
-                        System.out.println(adventure.look());
+                        System.out.println(adventure.playerLooks());
                         break;
 
                     case "help":
@@ -47,8 +48,11 @@ public class UserInterface {
                             case CANT:
                                 System.out.println("You have no ammo..");
                                 break;
-                            case NOT_FOUND:
+                            case ITEM_NOT_FOUND:
                                 System.out.println("No weapons equipped");
+                                break;
+                            case ENEMY_NOT_FOUND:
+                                System.out.println("No enemy to attack");
                                 break;
 
                         }
@@ -103,7 +107,7 @@ public class UserInterface {
                         switch (equipDTO.getReturnMessage()) {
                             case OK -> System.out.println("You have equipped " + equipDTO.getItem().getName());
                             case CANT -> System.out.println("You cannot equip " + equipDTO.getItem().getName());
-                            case NOT_FOUND -> System.out.println(inputSplit[1] + " not found");
+                            case ITEM_NOT_FOUND -> System.out.println(inputSplit[1] + " not found");
                         }
                         break;
 
@@ -111,7 +115,7 @@ public class UserInterface {
                         switch (adventure.playerEatsFood(inputSplit[1])) {
                             case OK -> System.out.println("You have eaten " + inputSplit[1]);
                             case CANT -> System.out.println("You cannot eat " + inputSplit[1]);
-                            case NOT_FOUND -> System.out.println(inputSplit[1] + " not found");
+                            case ITEM_NOT_FOUND -> System.out.println(inputSplit[1] + " not found");
                         }
                         break;
 
@@ -130,9 +134,12 @@ public class UserInterface {
                             };
                         }
                         switch (adventure.playerMoves(direction)) {
-                            case OK -> System.out.println("Going " + direction);
+                            case OK -> {
+                                System.out.println("Going " + direction);
+                                System.out.println(adventure.playerEntersRoom());
+                            }
                             case CANT -> System.out.println("You cannot go in this direction");
-                            case NOT_FOUND -> System.out.println("Invalid direction");
+                            case ITEM_NOT_FOUND -> System.out.println("Invalid direction");
                         }
 
                         break;

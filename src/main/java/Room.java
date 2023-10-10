@@ -31,6 +31,12 @@ public class Room {
         room.setWest(west);
     }
 
+    // Metode til at sætte currentRoom for fjenden og tilføje fjenden til et rum
+    public void addEnemy(Enemy enemy) {
+        enemy.setCurrentRoom(this); // Sæt rummet for fjenden
+        enemiesInRoom.add(enemy);   // Tilføj fjenden til rummet
+    }
+
 
     //Getters
     public String getName() {
@@ -69,6 +75,10 @@ public class Room {
         return itemsInRoom;
     }
 
+    public ArrayList<Enemy> getEnemiesInRoom() {
+        return enemiesInRoom;
+    }
+
     //Setters
     public void setNorth(Room north) {
         this.north = north;
@@ -94,31 +104,10 @@ public class Room {
         this.enemiesInRoom = enemiesInRoom;
     }
 
-    //ToString
-    @Override
-    public String toString() {
-        String description = isDark ? darkDescription : lightDescription;  // "?" er ensbetydende med at man laver en if else statement, koden ser bare mindre rodet ud sådan.
 
-        if (isDark) {
-            description += "\nIt's too dark to see any items or enemies.";
-        } else {
-            if (enemiesInRoom.isEmpty()) {
-                if (itemsInRoom.isEmpty()) { // Hvis det er lyst og der IKKE er items i rummet:
-                    description += "\nNo items to behold...";
-                } else { // Hvis det er lyst og der ER items i rummet:
-                    description += "\nBehold! Items in the room:";
-                    for (Item item : itemsInRoom) {
-                        description += "\n- " + item.getName();
-                    }
-                }
-            } else {
-                if (enemiesInRoom.size() == 1) description += "\nYou see 1 enemy in this room.\nYou are approached by " + enemiesInRoom.get(0);
-                else description += "\nYou see " + enemiesInRoom.size() + " enemies in this room.\nYou are approached by " + enemiesInRoom.get(0);
-            }
-        }
-        return description;
+    public void removeEnemy(Enemy enemy) {
+        enemiesInRoom.remove(enemy);
     }
-
 
     public void addItem(Item item) {
         itemsInRoom.add(item);
@@ -138,4 +127,34 @@ public class Room {
         return foundItem;
     }
 
+    //ToString
+    @Override
+    public String toString() {
+        String description = "";
+
+        if (isDark) { //Hvis rummet er mørkt
+            description += "\nIt's too dark to see any items or enemies.";
+        } else {
+            if (itemsInRoom.isEmpty()) { // Hvis det er lyst og der IKKE er items i rummet:
+                description += "\nNo items to behold...";
+            } else { // Hvis det er lyst og der ER items i rummet:
+                description += "\nBehold! Items in the room:";
+                for (Item item : itemsInRoom) {
+                    description += "\n- " + item.getName();
+                }
+            }
+        }
+        return description;
+    }
+
+    public String enterRoom() {
+        String description = isDark ? darkDescription : lightDescription;  // "?" er ensbetydende med at man laver en if else statement, koden ser bare mindre rodet ud sådan.
+        if (!enemiesInRoom.isEmpty()) {//Hvis der er enemies i rummet
+            if (enemiesInRoom.size() == 1)
+                description += "\nYou see 1 enemy in this room.\nYou are approached by " + enemiesInRoom.get(0).getName();
+            else
+                description += "\nYou see " + enemiesInRoom.size() + " enemies in this room.\nYou are approached by " + enemiesInRoom.get(0).getName();
+        }
+        return description;
+    }
 }

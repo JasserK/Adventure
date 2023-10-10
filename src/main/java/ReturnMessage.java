@@ -1,5 +1,7 @@
 public enum ReturnMessage {
     OK,
     CANT,
-    NOT_FOUND
+    ITEM_NOT_FOUND,
+    ENEMY_NOT_FOUND
+
 }

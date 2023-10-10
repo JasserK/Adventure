@@ -11,7 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Ændret toString for room så den indeholder ememies.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Adventure_jar/Adventure.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Adventure_jar/Adventure.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReturnMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReturnMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="Changes by yusef delopgave 4 in progress" />
@@ -103,7 +108,9 @@
       <workItem from="1696689103528" duration="270000" />
       <workItem from="1696689787091" duration="56000" />
       <workItem from="1696835349717" duration="5601000" />
-      <workItem from="1696846611171" duration="3706000" />
+      <workItem from="1696846611171" duration="4487000" />
+      <workItem from="1696854527066" duration="619000" />
+      <workItem from="1696919258872" duration="7191000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -297,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696848437621</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Ændret toString for room så den indeholder ememies.">
+      <option name="closed" value="true" />
+      <created>1696851160741</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1696851160741</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

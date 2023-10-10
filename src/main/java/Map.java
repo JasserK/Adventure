@@ -58,10 +58,10 @@ public class Map {
         //Room 1
         itemsInRoom1.add(new Item("Item1", "Item1 description"));
         itemsInRoom1.add(new Food("Bad1", "Bad food1 description", -100));
-        itemsInRoom1.add(new RangedWeapon("Desert Eagle", "You are practicing your second amendment.", 30, 2));
+        itemsInRoom1.add(new RangedWeapon("Desert Eagle", "You are practicing your second amendment.", 50, 2));
         itemsInRoom1.add(new MeleeWeapon("Sword1", "Sword1 description", 20));
 
-        enemiesInRoom1.add(new Enemy("Grim fyr", 100, new MeleeWeapon("Baseball bat", "Wooden baseball bat", 15 )));
+
 
         //Room 2
         itemsInRoom2.add(new Item("Item2", "Item2 description"));
@@ -73,6 +73,8 @@ public class Map {
 
         //Room 4
         itemsInRoom4.add(new Food("Mario mushroom", "What is this doing here?", 100));
+
+        room4.addEnemy(new Enemy("Grim fyr", 100, new MeleeWeapon("Baseball bat", "Wooden baseball bat", 15 )));
 
         //Room 5
         itemsInRoom5.add(new Item("Item5", "Item5 description"));

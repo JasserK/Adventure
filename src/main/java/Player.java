@@ -10,6 +10,8 @@ public class Player {
     private final int MIN_HEALTH = 0;
     private Weapon equipped;
 
+
+
     public ReturnMessage go(String direction) {
         ReturnMessage result = ReturnMessage.OK;
         switch (direction) {
@@ -64,7 +66,7 @@ public class Player {
                 break;
 
             default:
-                result = ReturnMessage.NOT_FOUND;
+                result = ReturnMessage.ITEM_NOT_FOUND;
                 break;
         }
         return result;
@@ -103,10 +105,12 @@ public class Player {
     }
 
     public String look() {
-
         return currentRoom.toString();
     }
 
+    public String enterRoom() {
+        return currentRoom.enterRoom();
+    }
 
     public ArrayList<Item> getInventory() {
         return inventory;
@@ -145,7 +149,7 @@ public class Player {
 
             } else return ReturnMessage.CANT;
         }
-        return ReturnMessage.NOT_FOUND;
+        return ReturnMessage.ITEM_NOT_FOUND;
     }
 
 
@@ -212,25 +216,43 @@ public class Player {
                 return equipDTO;
             }
         }
-        equipDTO = new EnumAndObjectDTO (ReturnMessage.NOT_FOUND,found);
+        equipDTO = new EnumAndObjectDTO (ReturnMessage.ITEM_NOT_FOUND,found);
         return equipDTO;
     }
 
 
 
-    public ReturnMessage attack(/*Enemy enemy*/) {
-        if (equipped != null) {
+    public ReturnMessage attack() {
+        if (equipped != null) { //Hvis player har et våben equipped
+            if (equipped.remainingUses() > 0) { //Hvis equipped har mere ammo
 
-            if (equipped.remainingUses() > 0) {
-                //enemy.health -= equipped.damage;
-                equipped.useAmmo();
-                return ReturnMessage.OK;
+                ArrayList<Enemy> enemiesInRoom = currentRoom.getEnemiesInRoom();
+
+                if (!enemiesInRoom.isEmpty()) { //Hvis der er enemies i currentRoom
+                    Enemy currentEnemy = enemiesInRoom.get(0); //Sætter currentEnemy til første enemy i rummets "enemyliste"
+                    currentEnemy.takeDamage(equipped.damage); //currentEnemy mister liv tilsvarende equipped våbens damage
+
+                    if (currentEnemy.isAlive()) {//Hvis enemy stadig er i live...
+                        takeDamage(currentEnemy.attack());//...angriber den spilleren tilbage
+                    } else {//Hvis enemy er død...
+                        currentRoom.removeEnemy(currentEnemy);//... fjernes currentEnemy fra rummet
+                    }
+
+                    equipped.useAmmo(); //equipped våben mister en ammo
+                    return ReturnMessage.OK;
+                } else {
+                    return ReturnMessage.ENEMY_NOT_FOUND; //Hvis der IKKE er enemies i currentRoom
+                }
             } else {
-                return ReturnMessage.CANT;
-
+                return ReturnMessage.CANT; //Hvis equipped IKKE har mere ammo
             }
         }
-        return ReturnMessage.NOT_FOUND;
+        return ReturnMessage.ITEM_NOT_FOUND; //Hvis player IKKE har et våben equipped
+    }
+
+    public int takeDamage (int damage) {
+        playerHealth -= damage;
+        return damage;
     }
 
 

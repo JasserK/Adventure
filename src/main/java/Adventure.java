@@ -12,10 +12,13 @@ public class Adventure {
         return player.go(direction);
     }
 
-    public String look() {
+    public String playerLooks() {
         return player.look();
     }
 
+    public String playerEntersRoom() {
+        return player.enterRoom();
+    }
     public Room lookDirection(String direction) {
         return player.lookDirection(direction);
     }
