@@ -48,7 +48,7 @@ public StringBuilder printPlayerEquipped() {
         return player.eatItem(itemName);
     }
 
-    public ReturnMessage playerAttacks() {
+    public AttackDTO playerAttacks() {
         return player.attack();
     }
 

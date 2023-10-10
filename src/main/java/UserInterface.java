@@ -40,10 +40,19 @@ public class UserInterface {
                         break;
 
                     case "attack", "a":
+                        AttackDTO dto = adventure.playerAttacks();
+                        switch (dto.getReturnMessage()) {
+                            case OK, ENEMY_IS_DEAD:
+                                System.out.println("You have dealt " + dto.getEnemyName() + " " + dto.getDamageDealt() + " damage.");
+                                switch (dto.getReturnMessage()) {
+                                    case OK:
+                                        System.out.println(dto.getEnemyName() + " damaged you by " + dto.getDamageTaken());
+                                        break;
 
-                        switch (adventure.playerAttacks()) {
-                            case OK:
-                                System.out.println("You are attacking: ");
+                                    case ENEMY_IS_DEAD:
+                                        System.out.println("You killed " + dto.getEnemyName());
+                                        break;
+                                }
                                 break;
                             case CANT:
                                 System.out.println("You have no ammo..");

@@ -20,8 +20,8 @@ public class Enemy {
         this.weapon = weapon;
     }
 
-    public int attack() {
-        return weapon.damage;
+    public int weaponDamage() {
+        return weapon.getDamage();
     }
 
     public void takeDamage(int damage) {

@@ -9,6 +9,7 @@ public class Player {
     private final int MAX_HEALTH = 100;
     private final int MIN_HEALTH = 0;
     private Weapon equipped;
+    private int equippedDamage;
 
 
 
@@ -208,6 +209,7 @@ public class Player {
                 }
                 equipped = (Weapon) found;
                 inventory.remove(found);
+                equippedDamage = equipped.getDamage();
                 equipDTO = new EnumAndObjectDTO (ReturnMessage.OK,found);
                 return equipDTO;
 
@@ -222,7 +224,8 @@ public class Player {
 
 
 
-    public ReturnMessage attack() {
+    public AttackDTO attack() {
+        AttackDTO attackDTO;
         if (equipped != null) { //Hvis player har et våben equipped
             if (equipped.remainingUses() > 0) { //Hvis equipped har mere ammo
 
@@ -230,24 +233,29 @@ public class Player {
 
                 if (!enemiesInRoom.isEmpty()) { //Hvis der er enemies i currentRoom
                     Enemy currentEnemy = enemiesInRoom.get(0); //Sætter currentEnemy til første enemy i rummets "enemyliste"
-                    currentEnemy.takeDamage(equipped.damage); //currentEnemy mister liv tilsvarende equipped våbens damage
+                    currentEnemy.takeDamage(equipped.getDamage()); //currentEnemy mister liv tilsvarende equipped våbens damage
 
                     if (currentEnemy.isAlive()) {//Hvis enemy stadig er i live...
-                        takeDamage(currentEnemy.attack());//...angriber den spilleren tilbage
+                        takeDamage(currentEnemy.weaponDamage());//...angriber den spilleren tilbage
+                        attackDTO = new AttackDTO (ReturnMessage.OK, currentEnemy, this);
                     } else {//Hvis enemy er død...
                         currentRoom.removeEnemy(currentEnemy);//... fjernes currentEnemy fra rummet
+                        attackDTO = new AttackDTO (ReturnMessage.ENEMY_IS_DEAD, currentEnemy, this);
                     }
-
                     equipped.useAmmo(); //equipped våben mister en ammo
-                    return ReturnMessage.OK;
+
+                    return attackDTO;
+
+
+
                 } else {
-                    return ReturnMessage.ENEMY_NOT_FOUND; //Hvis der IKKE er enemies i currentRoom
+                    return attackDTO = new AttackDTO (ReturnMessage.ENEMY_NOT_FOUND); //Hvis der IKKE er enemies i currentRoom
                 }
             } else {
-                return ReturnMessage.CANT; //Hvis equipped IKKE har mere ammo
+                return attackDTO = new AttackDTO (ReturnMessage.CANT); //Hvis equipped IKKE har mere ammo
             }
         }
-        return ReturnMessage.ITEM_NOT_FOUND; //Hvis player IKKE har et våben equipped
+        return attackDTO = new AttackDTO (ReturnMessage.ITEM_NOT_FOUND); //Hvis player IKKE har et våben equipped
     }
 
     public int takeDamage (int damage) {
@@ -288,6 +296,14 @@ public class Player {
 
     public int getPlayerHealth() {
         return playerHealth;
+    }
+
+    public Weapon getEquipped() {
+        return equipped;
+    }
+
+    public int getEquippedDamage() {
+        return equippedDamage;
     }
 
     public void setCurrentRoom(Room currentRoom) {//Bruges når ny adventure startes og currentRoom til starterRoom
