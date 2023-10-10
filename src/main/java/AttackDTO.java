@@ -3,14 +3,17 @@ public class AttackDTO {
     private String enemyName;
     private int damageDealt;
     private int damageTaken;
-    private int remainingAmmo;
+
+    private int remaingPlayerHealth;
+    private int remaingEnemyHealth;
 
     public AttackDTO(ReturnMessage returnMessage, Enemy enemy, Player player) {
         this.returnMessage = returnMessage;
         this.enemyName = enemy.getName();
         this.damageDealt = player.getEquippedDamage();
         this.damageTaken = enemy.weaponDamage();
-        this.remainingAmmo = player.getEquipped().remainingUses();
+        this.remaingPlayerHealth = player.getPlayerHealth();
+        this.remaingEnemyHealth = enemy.getHealth();
     }
 
     public AttackDTO(ReturnMessage returnMessage) {
@@ -33,7 +36,11 @@ public class AttackDTO {
         return damageTaken;
     }
 
-    public int getRemainingAmmo() {
-        return remainingAmmo;
+    public int getRemaingPlayerHealth() {
+        return remaingPlayerHealth;
+    }
+
+    public int getRemaingEnemyHealth() {
+        return remaingEnemyHealth;
     }
 }

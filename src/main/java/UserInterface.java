@@ -46,13 +46,16 @@ public class UserInterface {
                                 System.out.println("You have dealt " + dto.getEnemyName() + " " + dto.getDamageDealt() + " damage.");
                                 switch (dto.getReturnMessage()) {
                                     case OK:
-                                        System.out.println(dto.getEnemyName() + " damaged you by " + dto.getDamageTaken());
+
+                                        System.out.println(dto.getEnemyName() + " now has " + dto.getRemaingEnemyHealth() + " HP" + "\n" +
+                                                dto.getEnemyName() + " damaged you by " + dto.getDamageTaken());
                                         break;
 
                                     case ENEMY_IS_DEAD:
                                         System.out.println("You killed " + dto.getEnemyName());
                                         break;
                                 }
+                                System.out.println("Your remaining HP: " + dto.getRemaingPlayerHealth());
                                 break;
                             case CANT:
                                 System.out.println("You have no ammo..");

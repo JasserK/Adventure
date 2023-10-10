@@ -3,5 +3,6 @@ public class Main {
         UserInterface ui = new UserInterface();
         ui.startProgram();
     }
+    //TODO lav lys switch eller torch
 }
 
