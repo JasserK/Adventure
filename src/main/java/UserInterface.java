@@ -212,10 +212,12 @@ public class UserInterface {
         sb.append(Colour.ANSI_BLUE + "look (direction)" + Colour.ANSI_RESET + ":   Name of the room in said direction\n");
         sb.append(Colour.ANSI_BLUE + "go (direction)" + Colour.ANSI_RESET + ":     Character goes said direction\n");
 
+
         sb.append(Colour.ANSI_BLUE + "i / inventory" + Colour.ANSI_RESET + ":      Checks the player's inventory\n");
         sb.append(Colour.ANSI_BLUE + "e / equipped" + Colour.ANSI_RESET + ":       Checks equipped weapon\n");
         sb.append(Colour.ANSI_BLUE + "health" + Colour.ANSI_RESET + ":             Checks the player's health level\n");
         sb.append(Colour.ANSI_BLUE + "take (Item)" + Colour.ANSI_RESET + ":        Takes said item in the room\n");
+        sb.append(Colour.ANSI_BLUE + "light" + Colour.ANSI_RESET + ":              Lights up a dark room\n");
         sb.append(Colour.ANSI_BLUE + "drop (Item)" + Colour.ANSI_RESET + ":        Drops said item from player's inventory\n");
         sb.append(Colour.ANSI_BLUE + "e / equip (Weapon)" + Colour.ANSI_RESET + ": Equips weapon from player's inventory\n");
         sb.append(Colour.ANSI_BLUE + "a / attack" + Colour.ANSI_RESET + ":         Attacks\n");

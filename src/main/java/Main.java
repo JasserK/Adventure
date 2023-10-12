@@ -3,6 +3,10 @@ public class Main {
         UserInterface ui = new UserInterface();
         ui.startProgram();
     }
-    //TODO lav lys switch eller torch
+
+    //TODO UML for klasserne samt aktivitetsdiagram for attack
+    //TODO Tekst der skal rettes ift historie
+    //TODO Tilføjelse af enemies samt items
+
 }
 

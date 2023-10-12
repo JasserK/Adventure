@@ -96,6 +96,7 @@ public class Map {
         Room.setRoomConnections(room9, room6, null, null, room8);
     }
 
+    //Getter til at få starterRoom
     public Room getStarterRoom() {
         return starterRoom;
     }
