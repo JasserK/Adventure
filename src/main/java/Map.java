@@ -73,6 +73,7 @@ public class Map {
 
         //Room 4
         itemsInRoom4.add(new Food("Mario mushroom", "What is this doing here?", 100));
+        itemsInRoom4.add(new Item("Matchbox", "Light a fire with these"));
 
         room4.addEnemy(new Enemy("Grim fyr", 100, new MeleeWeapon("Baseball bat", "Wooden baseball bat", 15 )));
 

@@ -68,9 +68,18 @@ public class UserInterface {
                                 break;
 
                         }
-
-
                         break;
+
+                    case "light":
+                        ReturnMessage returnMessage = adventure.playerTurnsOnLight();
+                        switch (returnMessage) {
+                            case OK ->
+                                    System.out.println("You are using your trusty matchbox\n" + adventure.playerEntersRoom());
+                            case CANT -> System.out.println("Cannot light up a lit room..");
+                            case ITEM_NOT_FOUND -> System.out.println("You don't have a matchbox silly");
+                        }
+                        break;
+
 
                     case "exit", "quit":
                         running = false;

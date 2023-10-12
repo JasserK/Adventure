@@ -96,6 +96,10 @@ public class Room {
         this.west = west;
     }
 
+    public void setDark(boolean dark) {
+        isDark = dark;
+    }
+
     public void setItemsInRoom(ArrayList<Item> itemsInRoom) {
         this.itemsInRoom = itemsInRoom;
     }
@@ -149,12 +153,15 @@ public class Room {
 
     public String enterRoom() {
         String description = isDark ? darkDescription : lightDescription;  // "?" er ensbetydende med at man laver en if else statement, koden ser bare mindre rodet ud sådan.
-        if (!enemiesInRoom.isEmpty()) {//Hvis der er enemies i rummet
-            if (enemiesInRoom.size() == 1)
-                description += "\nYou see 1 enemy in this room.\nYou are approached by " + enemiesInRoom.get(0).getName();
-            else
-                description += "\nYou see " + enemiesInRoom.size() + " enemies in this room.\nYou are approached by " + enemiesInRoom.get(0).getName();
+        if (!isDark) {
+            if (!enemiesInRoom.isEmpty()) {//Hvis der er enemies i rummet
+                if (enemiesInRoom.size() == 1)
+                    description += "\nYou see 1 enemy in this room.\nYou are approached by " + enemiesInRoom.get(0).getName();
+                else
+                    description += "\nYou see " + enemiesInRoom.size() + " enemies in this room.\nYou are approached by " + enemiesInRoom.get(0).getName();
+            }
         }
+        else description += "\nYou cant see any enemies, but its too dark to be sure";
         return description;
     }
 }

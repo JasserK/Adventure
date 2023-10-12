@@ -43,6 +43,9 @@ public StringBuilder printPlayerEquipped() {
         return player.printEquipped();
     }
 
+    public ReturnMessage playerTurnsOnLight() {
+        return player.turnOnLight();
+    }
 
     public ReturnMessage playerEatsFood(String itemName) {
         return player.eatItem(itemName);
