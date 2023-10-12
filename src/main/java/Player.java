@@ -228,7 +228,9 @@ public class Player {
 
                 ArrayList<Enemy> enemiesInRoom = currentRoom.getEnemiesInRoom();
 
-                if (!enemiesInRoom.isEmpty()) { //Hvis der er enemies i currentRoom
+                if (enemiesInRoom.isEmpty()) { //Hvis der IKKE er enemies i currentRoom
+                    return attackDTO = new AttackDTO(ReturnMessage.ENEMY_NOT_FOUND);
+                } else { //Hvis der er enemies i rummet
                     Enemy currentEnemy = enemiesInRoom.get(0); //Sætter currentEnemy til første enemy i rummets "enemyliste"
                     currentEnemy.takeDamage(equipped.getDamage()); //currentEnemy mister liv tilsvarende equipped våbens damage
 
@@ -244,8 +246,6 @@ public class Player {
                     return attackDTO;
 
 
-                } else {
-                    return attackDTO = new AttackDTO(ReturnMessage.ENEMY_NOT_FOUND); //Hvis der IKKE er enemies i currentRoom
                 }
             } else {
                 return attackDTO = new AttackDTO(ReturnMessage.CANT); //Hvis equipped IKKE har mere ammo
@@ -276,7 +276,6 @@ public class Player {
         }
         return ReturnMessage.ITEM_NOT_FOUND;
     }
-
 
 
     public boolean isAlive() {
