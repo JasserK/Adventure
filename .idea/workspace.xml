@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Ændret klassediagram">
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Tilføjet rigtige descriptions til rum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
     </list>
@@ -117,7 +117,7 @@
       <workItem from="1696933663031" duration="10742000" />
       <workItem from="1697091980899" duration="12608000" />
       <workItem from="1697111279233" duration="3688000" />
-      <workItem from="1697117668072" duration="15226000" />
+      <workItem from="1697117668072" duration="16575000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -407,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697136622255</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Tilføjet rigtige descriptions til rum">
+      <option name="closed" value="true" />
+      <created>1697138695307</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1697138695307</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +433,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes by yusef" />
     <MESSAGE value="delopgave 2 in progress..." />
     <MESSAGE value="Udvidet Help system samt refaktoreret kode. (Food klasse tilføjet)" />
     <MESSAGE value="Food class done" />
@@ -450,6 +457,7 @@
     <MESSAGE value="Flyttet metoder i klasser" />
     <MESSAGE value="Tilføjet klassediagram" />
     <MESSAGE value="Ændret klassediagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændret klassediagram" />
+    <MESSAGE value="Tilføjet rigtige descriptions til rum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet rigtige descriptions til rum" />
   </component>
 </project>

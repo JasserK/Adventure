@@ -194,8 +194,6 @@ public class UserInterface {
     private StringBuilder startMessage() {
         StringBuilder sb = new StringBuilder();
         sb.append("Welcome to Adventure!\n");
-        sb.append("You are about to embark on an epic adventure in the fabled Eternal city Nokron.\n");
-        sb.append("But be wary, young adventurer! Not only are there riches for the taking, but also nasty monsters!\n");
         sb.append("Survive as long as you can until your defeat... )\n");
 
         return sb;
