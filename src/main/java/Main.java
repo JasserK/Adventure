@@ -4,9 +4,9 @@ public class Main {
         ui.startProgram();
     }
 
-    //TODO UML for klasserne samt aktivitetsdiagram for attack
+
     //TODO Tekst der skal rettes ift historie
-    //TODO Tilføjelse af enemies samt items
+
 
 }
 

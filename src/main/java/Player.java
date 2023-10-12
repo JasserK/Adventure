@@ -112,11 +112,6 @@ public class Player {
         return currentRoom.enterRoom();
     }
 
-    public ArrayList<Item> getInventory() {
-        return inventory;
-    }
-
-
     public boolean takeItem(String itemName) {
         Item found = currentRoom.removeItem(itemName);
         if (found != null) {
@@ -152,7 +147,6 @@ public class Player {
         return ReturnMessage.ITEM_NOT_FOUND;
     }
 
-
     public boolean dropItem(String itemName) {
         Item foundItem = null;
         for (Item i : inventory) {
@@ -167,29 +161,6 @@ public class Player {
         }
         return false;
     }
-    // Gammel equip metode
-    // public ReturnMessage equip(String itemName) {
-    //     Item found = null;
-    //
-    //     for (Item i : inventory) {
-    //         if (itemName.trim().equalsIgnoreCase(i.getItemName())) {
-    //             found = i;
-    //         }
-    //     }
-    //     if (found != null) {
-    //         if (found instanceof Weapon) {
-    //             if (equipped != null) {
-    //                 inventory.add(equipped);
-    //             }
-    //             equipped = (Weapon) found;
-    //             inventory.remove(found);
-    //             return ReturnMessage.OK;
-    //
-    //         } else return ReturnMessage.CANT;
-    //     }
-    //     return ReturnMessage.NOT_FOUND;
-    // }
-
 
     public EquipDTO equip(String itemName) {
 
@@ -220,11 +191,10 @@ public class Player {
         return equipDTO;
     }
 
-
     public AttackDTO attack() {
         AttackDTO attackDTO;
         if (equipped != null) { //Hvis player har et våben equipped
-            if (equipped.remainingUses() > 0) { //Hvis equipped har mere ammo
+            if (equipped.getAmmo() > 0) { //Hvis equipped har mere ammo
 
                 ArrayList<Enemy> enemiesInRoom = currentRoom.getEnemiesInRoom();
 
@@ -259,9 +229,11 @@ public class Player {
         return damage;
     }
 
+    public boolean isAlive() {
+        return playerHealth > MIN_HEALTH;
+    }
 
     // Metode til at sætte isDark variablen til false
-
     public ReturnMessage turnOnLight() {
         Item found = null;
         for (Item i : inventory) {
@@ -276,12 +248,6 @@ public class Player {
         }
         return ReturnMessage.ITEM_NOT_FOUND;
     }
-
-
-    public boolean isAlive() {
-        return playerHealth > MIN_HEALTH;
-    }
-
 
     public StringBuilder printInventory() {
         StringBuilder print = new StringBuilder("Inventory:");
@@ -308,12 +274,11 @@ public class Player {
     }
 
 
+
+
+    // Getters og Setters
     public int getPlayerHealth() {
         return playerHealth;
-    }
-
-    public Weapon getEquipped() {
-        return equipped;
     }
 
     public int getEquippedDamage() {

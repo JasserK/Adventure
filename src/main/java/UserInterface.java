@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    Adventure adventure = new Adventure();
+    private Adventure adventure = new Adventure();
     private Scanner scanner = new Scanner(System.in);
-    boolean running = true;
+    private boolean running = true;
 
     public void startProgram() {
 
@@ -24,15 +24,15 @@ public class UserInterface {
                         break;
 
                     case "help":
-                        showHelp();
+                        System.out.println(showHelp());
                         break;
 
                     case "inventory", "i":
-                        System.out.println(adventure.printPlayerInventory());
+                        System.out.println(adventure.playerPrintInventory());
                         break;
 
                     case "equipped", "e":
-                        System.out.println(adventure.printPlayerEquipped());
+                        System.out.println(adventure.playerPrintEquipped());
                         break;
 
                     case "health":
@@ -87,7 +87,7 @@ public class UserInterface {
                         break;
 
                     default:
-                        invalidCommandPrompt();
+                        System.out.println(invalidCommandPrompt());
                         break;
                 }
             } else {
@@ -96,7 +96,7 @@ public class UserInterface {
                 switch (inputSplit[0]) { //Håndterer kommandoer med flere ord
 
                     case "look": // Kig et sted hen
-                        Room roomLookedAt = adventure.lookDirection(inputSplit[1]);
+                        Room roomLookedAt = adventure.playerLooksDirection(inputSplit[1]);
                         if (roomLookedAt == null) {
                             System.out.println("You dont see anything in this direction");
                         } else {
@@ -166,7 +166,7 @@ public class UserInterface {
                         break;
 
                     default:
-                        invalidCommandPrompt();
+                        System.out.println(invalidCommandPrompt());
 
                 }
             }
@@ -191,7 +191,7 @@ public class UserInterface {
     }
 
 
-    public StringBuilder startMessage() {
+    private StringBuilder startMessage() {
         StringBuilder sb = new StringBuilder();
         sb.append("Welcome to Adventure!\n");
         sb.append("You are about to embark on an epic adventure in the fabled Eternal city Nokron.\n");
@@ -201,7 +201,7 @@ public class UserInterface {
         return sb;
     }
 
-    public void showHelp() {
+    private StringBuilder showHelp() {
         StringBuilder sb = new StringBuilder();
         sb.append("These are the following commands you can use:\n");
         sb.append(Colour.ANSI_BLUE + "help" + Colour.ANSI_RESET + ": Shows this message\n\n");
@@ -222,13 +222,14 @@ public class UserInterface {
         sb.append(Colour.ANSI_BLUE + "e / equip (Weapon)" + Colour.ANSI_RESET + ": Equips weapon from player's inventory\n");
         sb.append(Colour.ANSI_BLUE + "a / attack" + Colour.ANSI_RESET + ":         Attacks\n");
         sb.append(Colour.ANSI_BLUE + "exit / quit" + Colour.ANSI_RESET + ":        Exits program");
-        System.out.println(sb);
+
+        return sb;
 
     }
 
 
-    public void invalidCommandPrompt() {
-        System.out.println(Colour.ANSI_RED + "Invalid command\nType " + Colour.ANSI_BLUE + "\"help\" " + Colour.ANSI_RED + "for a list of commands." + Colour.ANSI_RESET);
+    private String invalidCommandPrompt() {
+        return Colour.ANSI_RED + "Invalid command\nType " + Colour.ANSI_BLUE + "\"help\" " + Colour.ANSI_RED + "for a list of commands." + Colour.ANSI_RESET;
     }
 
     private String firstLetterToUpperCase(String input) {

@@ -5,18 +5,15 @@ public class MeleeWeapon extends Weapon {
     }
 
     @Override
+    public void useAmmo() {}
+    @Override
     public int getDamage() {
         return super.getDamage();
     }
 
     @Override
-    public int remainingUses() {
-        return 1; //remainingUses() returnerer er altid 1 for MeleeWeapons. Hvis det var 0, så ville attack() betragte det som at våbnet ikke har flere skud.
-    }
-
-    @Override
-    public void useAmmo() {
-
+    public int getAmmo() {
+        return 1; //getAmmo() returnerer er altid 1 for MeleeWeapons. Derfor vil der altid være "ammo" og attack() tillader at der angribes.
     }
 
     @Override

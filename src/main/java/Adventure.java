@@ -1,6 +1,6 @@
 public class Adventure {
-    Map map = new Map();
-    Player player = new Player();
+    private Map map = new Map();
+    private Player player = new Player();
 
     public Adventure() {
         map.initializeRooms();
@@ -19,7 +19,7 @@ public class Adventure {
     public String playerEntersRoom() {
         return player.enterRoom();
     }
-    public Room lookDirection(String direction) {
+    public Room playerLooksDirection(String direction) {
         return player.lookDirection(direction);
     }
 
@@ -35,11 +35,11 @@ public class Adventure {
         return player.equip(weaponName);
     }
 
-    public StringBuilder printPlayerInventory() {
+    public StringBuilder playerPrintInventory() {
         return player.printInventory();
     }
 
-public StringBuilder printPlayerEquipped() {
+public StringBuilder playerPrintEquipped() {
         return player.printEquipped();
     }
 

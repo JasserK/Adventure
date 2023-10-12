@@ -6,6 +6,8 @@ public class Map {
 
 
     public void initializeRooms() {
+
+        //Opretter og indsætter enemies og items i rum
         //Room 1
         ArrayList<Item> itemsInRoom1 = new ArrayList<>();
         ArrayList<Enemy> enemiesInRoom1 = new ArrayList<>();

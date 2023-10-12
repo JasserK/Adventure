@@ -1,19 +1,10 @@
 public class Enemy {
+    private Room currentRoom;
     private String name;
     private int health;
     private Weapon weapon;
     private Food food;
     private final int MIN_HEALTH = 0;
-
-    private Room currentRoom;
-
-    public boolean isAlive() {
-        return health > MIN_HEALTH;
-    }
-
-    public void setCurrentRoom(Room room) {
-        this.currentRoom = room;
-    }
 
     public Enemy(String name, int health, Weapon weapon) {
         this.name = name;
@@ -28,8 +19,8 @@ public class Enemy {
         this.food = food;
     }
 
-    public int weaponDamage() {
-        return weapon.getDamage();
+    public boolean isAlive() {
+        return health > MIN_HEALTH;
     }
 
     public void takeDamage(int damage) {
@@ -45,6 +36,16 @@ public class Enemy {
             currentRoom.addItem(food);
         }
         currentRoom.removeEnemy(this);
+    }
+
+    public int weaponDamage() {
+        return weapon.getDamage();
+    }
+
+
+    //Getters og Setters
+    public void setCurrentRoom(Room room) {
+        this.currentRoom = room;
     }
 
     public String getName() {
