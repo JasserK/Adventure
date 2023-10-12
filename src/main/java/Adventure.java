@@ -31,7 +31,7 @@ public class Adventure {
         return player.dropItem(itemName);
     }
 
-    public EnumAndObjectDTO playerEquipsWeapon(String weaponName) {
+    public EquipDTO playerEquipsWeapon(String weaponName) {
         return player.equip(weaponName);
     }
 

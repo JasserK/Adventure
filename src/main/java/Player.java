@@ -193,9 +193,9 @@ public class Player {
 
 
 
-    public EnumAndObjectDTO equip(String itemName) {
+    public EquipDTO equip(String itemName) {
 
-        EnumAndObjectDTO equipDTO;
+        EquipDTO equipDTO;
         Item found = null;
         for (Item i : inventory) {
             if (itemName.trim().equalsIgnoreCase(i.getName())) {
@@ -210,15 +210,15 @@ public class Player {
                 equipped = (Weapon) found;
                 inventory.remove(found);
                 equippedDamage = equipped.getDamage();
-                equipDTO = new EnumAndObjectDTO (ReturnMessage.OK,found);
+                equipDTO = new EquipDTO(ReturnMessage.OK,found);
                 return equipDTO;
 
             } else{
-                equipDTO = new EnumAndObjectDTO (ReturnMessage.CANT,found);
+                equipDTO = new EquipDTO(ReturnMessage.CANT,found);
                 return equipDTO;
             }
         }
-        equipDTO = new EnumAndObjectDTO (ReturnMessage.ITEM_NOT_FOUND,found);
+        equipDTO = new EquipDTO(ReturnMessage.ITEM_NOT_FOUND,found);
         return equipDTO;
     }
 

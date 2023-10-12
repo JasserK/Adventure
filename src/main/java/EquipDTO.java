@@ -1,16 +1,16 @@
 //TODO delete
-public class EnumAndObjectDTO {
+public class EquipDTO {
     private ReturnMessage returnMessage;
     private Item item;
     private Weapon weapon;
 
 
     //Constructors
-    public EnumAndObjectDTO(ReturnMessage returnMessage, Item object) {
+    public EquipDTO(ReturnMessage returnMessage, Item object) {
         this.returnMessage = returnMessage;
         this.item = object;
     }
-    public EnumAndObjectDTO(ReturnMessage returnMessage, Weapon weapon) {
+    public EquipDTO(ReturnMessage returnMessage, Weapon weapon) {
         this.returnMessage = returnMessage;
         this.weapon = weapon;
     }

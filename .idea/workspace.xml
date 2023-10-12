@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Attack metode done. Mangler at udvide output">
+    <list default="true" id="16a3c7e4-b0c5-4910-9e1c-20c89da1fa18" name="Changes" comment="Attack metode done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AttackDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AttackDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EnumAndObjectDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EquipDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
     <list id="e9b4f08e-466a-40bb-8e99-17387f80df62" name="Changes by yusef" comment="Changes by yusef delopgave 4 in progress" />
@@ -108,7 +108,8 @@
       <workItem from="1696846611171" duration="4487000" />
       <workItem from="1696854527066" duration="619000" />
       <workItem from="1696919258872" duration="7516000" />
-      <workItem from="1696933663031" duration="10710000" />
+      <workItem from="1696933663031" duration="10742000" />
+      <workItem from="1697091980899" duration="1028000" />
     </task>
     <task id="LOCAL-00001" summary="go method">
       <option name="closed" value="true" />
@@ -326,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696942764128</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Attack metode done.">
+      <option name="closed" value="true" />
+      <created>1696944403078</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1696944403078</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +375,7 @@
     <MESSAGE value="Ændret toString for room så den indeholder ememies." />
     <MESSAGE value="Attack for player og enemy virker. Mangler noget output når der attackes" />
     <MESSAGE value="Attack metode done. Mangler at udvide output" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attack metode done. Mangler at udvide output" />
+    <MESSAGE value="Attack metode done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Attack metode done." />
   </component>
 </project>
